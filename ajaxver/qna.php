@@ -10,7 +10,7 @@
 function getA(postID) {
 	DIV='answerDiv';
 $.ajax({
-		url: 'loadQ.php',
+		url: 'loadA.php',
 		dataType: 'html',
 		type: 'POST',
 		data: { id: postID},
