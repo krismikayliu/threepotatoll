@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.11
+-- version 4.3.11
 -- http://www.phpmyadmin.net
 --
 -- 主機: 127.0.0.1
--- 產生時間： 2016 �?06 ??18 ??14:49
--- 伺服器版本: 5.6.21
--- PHP 版本： 5.6.3
+-- 產生時間： 2016 �?07 ??16 ??23:27
+-- 伺服器版本: 5.6.24
+-- PHP 版本： 5.6.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `category` (
-`cid` int(11) NOT NULL,
+  `cid` int(11) NOT NULL,
   `cname` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
@@ -45,11 +45,31 @@ INSERT INTO `category` (`cid`, `cname`) VALUES
 -- --------------------------------------------------------
 
 --
+-- 資料表結構 `lesson`
+--
+
+CREATE TABLE IF NOT EXISTS `lesson` (
+  `pid` int(5) NOT NULL,
+  `content` varchar(50) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `qid` int(4) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+
+--
+-- 資料表的匯出資料 `lesson`
+--
+
+INSERT INTO `lesson` (`pid`, `content`, `qid`) VALUES
+(1, 'http://images.agoramedia.com/everydayhealth/gcms/6', 1),
+(2, '圖片一的敘述', 1);
+
+-- --------------------------------------------------------
+
+--
 -- 資料表結構 `options`
 --
 
 CREATE TABLE IF NOT EXISTS `options` (
-`oid` int(5) NOT NULL,
+  `oid` int(5) NOT NULL,
   `woption` varchar(40) COLLATE utf8_unicode_520_ci NOT NULL,
   `answer` tinyint(4) NOT NULL,
   `qid` int(5) NOT NULL
@@ -1197,7 +1217,7 @@ INSERT INTO `options` (`oid`, `woption`, `answer`, `qid`) VALUES
 (1135, '掉出揉捻盤之茶菁可用手撥回', 0, 284),
 (1136, '一開始就必需採重壓揉捻', 0, 284),
 (1137, '茶菁較嫩時揉捻機壓力增大促使成條狀', 0, 285),
-(1138, '茶菁較老時揉捻機壓力減小 促使成條狀', 0, 285),
+(1138, '茶菁較老時揉捻機壓力減小促使成條狀', 0, 285),
 (1139, '茶菁較老時揉捻機壓力增大促使成條狀', 1, 285),
 (1140, '揉捻壓力不影響茶葉成形。', 0, 285),
 (1141, '伊達式揉捻機', 0, 286),
@@ -1580,8 +1600,7 @@ INSERT INTO `options` (`oid`, `woption`, `answer`, `qid`) VALUES
 (1518, '黃綠', 0, 380),
 (1519, '暗綠', 1, 380),
 (1520, '褐綠', 0, 380),
-(1521, ' 粗老	', 1, 381);
-INSERT INTO `options` (`oid`, `woption`, `answer`, `qid`) VALUES
+(1521, ' 粗老	', 1, 381),
 (1522, '幼嫩', 0, 381),
 (1523, '老嫩無拘', 0, 381),
 (1524, '太短', 0, 381),
@@ -2258,7 +2277,8 @@ INSERT INTO `options` (`oid`, `woption`, `answer`, `qid`) VALUES
 (2195, '南', 0, 549),
 (2196, '北', 1, 549),
 (2197, '黑色', 1, 550),
-(2198, '白色', 0, 550),
+(2198, '白色', 0, 550);
+INSERT INTO `options` (`oid`, `woption`, `answer`, `qid`) VALUES
 (2199, '綠色', 0, 550),
 (2200, '棕色', 0, 550),
 (2201, '藍色', 0, 551),
@@ -2861,7 +2881,7 @@ INSERT INTO `options` (`oid`, `woption`, `answer`, `qid`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `question` (
-`qid` int(5) NOT NULL,
+  `qid` int(5) NOT NULL,
   `question` varchar(50) COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `cid` int(3) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=699 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
@@ -3578,19 +3598,25 @@ INSERT INTO `question` (`qid`, `question`, `cid`) VALUES
 -- 資料表索引 `category`
 --
 ALTER TABLE `category`
- ADD PRIMARY KEY (`cid`);
+  ADD PRIMARY KEY (`cid`);
+
+--
+-- 資料表索引 `lesson`
+--
+ALTER TABLE `lesson`
+  ADD PRIMARY KEY (`pid`);
 
 --
 -- 資料表索引 `options`
 --
 ALTER TABLE `options`
- ADD PRIMARY KEY (`oid`);
+  ADD PRIMARY KEY (`oid`);
 
 --
 -- 資料表索引 `question`
 --
 ALTER TABLE `question`
- ADD PRIMARY KEY (`qid`);
+  ADD PRIMARY KEY (`qid`);
 
 --
 -- 在匯出的資料表使用 AUTO_INCREMENT
@@ -3600,17 +3626,22 @@ ALTER TABLE `question`
 -- 使用資料表 AUTO_INCREMENT `category`
 --
 ALTER TABLE `category`
-MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+--
+-- 使用資料表 AUTO_INCREMENT `lesson`
+--
+ALTER TABLE `lesson`
+  MODIFY `pid` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- 使用資料表 AUTO_INCREMENT `options`
 --
 ALTER TABLE `options`
-MODIFY `oid` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2793;
+  MODIFY `oid` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2793;
 --
 -- 使用資料表 AUTO_INCREMENT `question`
 --
 ALTER TABLE `question`
-MODIFY `qid` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=699;
+  MODIFY `qid` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=699;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
