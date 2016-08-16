@@ -148,49 +148,49 @@ require_once("config.php");
             <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
         </div>
         <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden;">
-            <div data-p="112.50" style="display: none;">
+            <div id="slide01" data-p="112.50" style="display: none;">
                 <img data-u="image" src="http://images.agoramedia.com/everydayhealth/gcms/6-best-teas-for-arthritis-symptoms-722x406.jpg?width=623" />
             </div>
-            <div data-p="112.50" style="display: none;">
+            <div id="slide02" data-p="112.50" style="display: none;">
                 <img data-u="image" src="img/002.jpg" />
                 <div data-u="caption" data-t="0" style="position: absolute; top: 320px; left: 30px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.5); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">mobile ready, touch swipe</div>
             </div>
-            <div data-p="112.50" style="display: none;">
+            <div id="slide03" data-p="112.50" style="display: none;">
                 <img data-u="image" src="img/007.jpg" />
                 <div data-u="caption" data-t="1" data-3d="1" style="position: absolute; top: -50px; left: 125px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.5); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">time lined layer animation</div>
             </div>
-            <div data-p="112.50" style="display: none;">
+            <div id="slide04" data-p="112.50" style="display: none;">
                 <img data-u="image" src="img/003.jpg" />
                 <div data-u="caption" data-t="2" style="position: absolute; top: 30px; left: -380px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.5); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">finger catchable right to left</div>
             </div>
-            <div data-p="112.50" style="display: none;">
+            <div id="slide05" data-p="112.50" style="display: none;">
                 <img data-u="image" src="img/004.jpg" />
                 <div data-u="caption" data-t="3" style="position: absolute; top: 30px; left: 30px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.5); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">responsive, scale smoothly</div>
             </div>
-            <div data-p="112.50" style="display: none;">
+            <div id="slide06" data-p="112.50" style="display: none;">
                 <img data-u="image" src="img/005.jpg" />
                 <div data-u="caption" data-t="4" style="position: absolute; top: 30px; left: 30px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.6); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">image, text, and custom layers</div>
             </div>
-            <div data-p="112.50" style="display: none;">
+            <div id="slide07" data-p="112.50" style="display: none;">
                 <img data-u="image" src="img/006.jpg" />
                 <div data-u="caption" data-t="5" style="position: absolute; top: 30px; left: 600px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.5); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">tons of transition type</div>
             </div>
-            <div data-p="112.50" style="display: none;">
+            <div id="slide08" data-p="112.50" style="display: none;">
                 <img data-u="image" src="img/009.jpg" />
                 <div data-u="caption" data-t="6" style="position: absolute; top: 30px; left: 30px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.5); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">visual slider maker</div>
             </div>
-            <div data-b="0" data-p="112.50" style="display: none;">
+            <div id="slide09" data-b="0" data-p="112.50" style="display: none;">
                 <img data-u="image" src="img/008.jpg" />
                 <div data-u="caption" data-t="7" style="position: absolute; top: -50px; left: 30px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.5); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">play in and play out</div>
             </div>
-            <div data-p="112.50" style="display: none;">
+            <div id="slide10" data-p="112.50" style="display: none;">
                 <img data-u="image" src="img/011.jpg" />
                 <!--下面這個div是在圖片上的動畫-->
                 <div data-u="caption" data-t="8" data-3d="1" style="position: absolute; top: 25px; left: 150px; width: 250px; height: 250px; background-color: rgba(40,177,255,0.6); overflow: hidden;">
                     <div data-u="caption" data-t="9" style="position: absolute; top: 100px; left: 25px; width: 200px; height: 50px; font-size: 24px; line-height: 50px;">A Child Layer</div>
                 </div>
             </div>
-            <div data-p="112.50" style="display: none;">
+            <div id="slide11" data-p="112.50" style="display: none;">
                 <img data-u="image" src="img/010.jpg" />
                 <div data-u="caption" data-t="10" data-3d="1" style="position: absolute; top: 25px; left: 100px; width: 250px; height: 250px; background-color: rgba(40,177,255,0.6);">
                     <div style="margin: 15px; font-size: 20px;">
