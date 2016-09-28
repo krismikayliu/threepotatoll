@@ -1,12 +1,5 @@
-
 <?php
 require_once("config.php");
-    
-$id=(int)$_REQUEST['aid'];
-
-$sql = "select * from options where oid=" . $id;
-if($results=mysqli_query($conn,$sql)) {
-    $rs=mysqli_fetch_array($results);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -28,20 +21,26 @@ $.ajax({
 			}
 	});
 }
-</script>
-</head>
-<body>
-<tr><td>answer:</td>
-<td>
-<?php if ($rs['answer']==1)
-        echo "yes";
-    else
-        echo "no"; ?>
-</td></tr>
-<?php
+function BetsuQuestions() {
+	DIV='div001';
+$.ajax({
+		url: 'chooseCate.php',
+		dataType: 'html',
+		type: 'POST',
+		error: function(xhr) {
+			$('#'+DIV).html(xhr);
+			},
+		success: function(response) {
+			$('#'+DIV).html(response); //set the html content of the object msg
+			}
+	});
 }
-?>
-<input type="button" onclick="RandomQuestions()" value="下一題">
+</script>
+<title>TEA Question</title>
+</head>
+
+<body>
+<input type="button" onclick="BetsuQuestions()" value="分類練習">
+<input type="button" onclick="RandomQuestions()" value="隨機練習">
 </body>
 </html>
-

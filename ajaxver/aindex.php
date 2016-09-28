@@ -23,10 +23,38 @@ $.ajax({
 			}
 	});
 }
-function loadAllPosts() {
-	DIV='div001';
+function loadQuestions() {
+	DIV='div002';
 $.ajax({
 		url: 'qna.php',
+		dataType: 'html',
+		type: 'POST',
+		error: function(xhr) {
+			$('#'+DIV).html(xhr);
+			},
+		success: function(response) {
+			$('#'+DIV).html(response); //set the html content of the object msg
+			}
+	});
+}
+function info() {
+	DIV='div001';
+$.ajax({
+		url: 'information.php',
+		dataType: 'html',
+		type: 'POST',
+		error: function(xhr) {
+			$('#'+DIV).html(xhr);
+			},
+		success: function(response) {
+			$('#'+DIV).html(response); //set the html content of the object msg
+			}
+	});
+}
+function practice() {
+	DIV='div001';
+$.ajax({
+		url: 'practiceKind.php',
 		dataType: 'html',
 		type: 'POST',
 		error: function(xhr) {
@@ -40,10 +68,17 @@ $.ajax({
 
 </script>
 </head>
-    <body>
-Tea Question <input type="button" onclick="loadAllPosts()" value="更新題目">
+<body>
+<div id='allPage'>
+Tea Question
+<br/>
+<input type="button" onclick="info()" value="個人資料">
+<input type="button" onclick="" value="排行榜">
+<input type="button" onclick="practice()" value="題目練習">
 <hr>
 <div id='div001'></div>
+<div id='div002'></div>
 <div id='answerDiv'></div>
+</div>
 </body>
 </html>

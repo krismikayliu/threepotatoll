@@ -7,13 +7,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
-function getA(postID) {
-	DIV='answerDiv';
+function getA(answerID) {
+	DIV='div001';
 $.ajax({
 		url: 'loadA.php',
 		dataType: 'html',
 		type: 'POST',
-		data: { id: postID},
+		data: { aid: answerID},
 		error: function(xhr) {
 			$('#'+DIV).html(xhr);
 			},
@@ -31,7 +31,7 @@ $.ajax({
 <table width="600" border="1">
 <?php
 $random=rand(1,698);
-$sql = "select * from `question` where qid=$random";
+$sql = "select * from `question` where qid=337";/////////////////
 $results=mysqli_query($conn,$sql);
 
 while (	$rs=mysqli_fetch_array($results)) {
@@ -43,9 +43,9 @@ while (	$rs=mysqli_fetch_array($results)) {
 }
 ?>
 </table>
-<table width="400" border="1">
+<table width="550" border="1">
 <?php
-$sql = "select * from `options` where qid=$random";
+$sql = "select * from `options` where qid=337";/////////////////////$random
 $results=mysqli_query($conn,$sql);
 
 while (	$rs=mysqli_fetch_array($results)) {
