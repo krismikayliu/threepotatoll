@@ -31,7 +31,7 @@ $.ajax({
 <table width="600" border="1">
 <?php
 $random=rand(1,698);
-$sql = "select * from `question` where qid=337";/////////////////
+$sql = "select * from `question` where qid=$random";/////////////////
 $results=mysqli_query($conn,$sql);
 
 while (	$rs=mysqli_fetch_array($results)) {
@@ -45,7 +45,7 @@ while (	$rs=mysqli_fetch_array($results)) {
 </table>
 <table width="550" border="1">
 <?php
-$sql = "select * from `options` where qid=337";/////////////////////$random
+$sql = "select * from `options` where qid=$random";/////////////////////$random
 $results=mysqli_query($conn,$sql);
 
 while (	$rs=mysqli_fetch_array($results)) {
