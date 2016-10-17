@@ -1,0 +1,1 @@
+$sql = "select * from `question`,`option` where `question`.qid=`option`.qid and `question`.qid=1";
