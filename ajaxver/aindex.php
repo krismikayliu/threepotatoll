@@ -8,21 +8,7 @@ require_once("config.php");
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
-function getA(postID) {
-	DIV='answerDiv';
-$.ajax({
-		url: 'loadA.php',
-		dataType: 'html',
-		type: 'POST',
-		data: { id: postID},
-		error: function(xhr) {
-			$('#'+DIV).html(xhr);
-			},
-		success: function(response) {
-			$('#'+DIV).html(response); //set the html content of the object msg
-			}
-	});
-}
+
 function loadQuestions() {
 	DIV='div002';
 $.ajax({
