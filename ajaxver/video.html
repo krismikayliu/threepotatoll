@@ -1,0 +1,159 @@
+﻿<?php
+require_once("config.php");
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" -->
+<html xmlns="http://www.w3.org/1999/xhtml"  style="height: 100%;">
+<head>
+<title>Video</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="jquery.js" type="text/javascript"></script>
+<script type="text/javascript"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-1.12.1.min.js" integrity="sha256-I1nTg78tSrZev3kjvfdM5A5Ak/blglGzlaZANLPDl3I=" crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<style type="text/css">
+	/*
+	col_border:名稱;
+	border-style:邊框的形式;
+	border-width:邊框的寬度;
+	*/
+	.col_border{
+		
+	}
+	.header{
+		margin-top:30px;
+	}
+	.row{
+		margin-bottom: 15px;
+	}
+	
+</style>
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="row"><!--logo 4個欄位-->
+			<div class="col-md-4 col_border header">
+				<a href="home.php"><img src="images/tealogo.png" style="width:50%"></a><br/><br/>
+			</div>
+		</div>
+		<!--***<div class="row">navbar下拉式選單 12個欄位
+			<div class="col-md-12 col_border">
+				<nav id="navbar-example" class="navbar navbar-default navbar-static"> <div class="container-fluid"> <div class="navbar-header"> <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="#">Project Name</a> </div> <div class="collapse navbar-collapse bs-example-js-navbar-collapse"> <ul class="nav navbar-nav"> <li class="dropdown"> <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Dropdown <span class="caret"></span> </a> <ul class="dropdown-menu" aria-labelledby="drop1"> <li><a href="#">Action</a></li> <li><a href="#">Another action</a></li> <li><a href="#">Something else here</a></li> <li role="separator" class="divider"></li> <li><a href="#">Separated link</a></li> </ul> </li> <li class="dropdown"> <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Dropdown <span class="caret"></span> </a> <ul class="dropdown-menu" aria-labelledby="drop2"> <li><a href="#">Action</a></li> <li><a href="#">Another action</a></li> <li><a href="#">Something else here</a></li> <li role="separator" class="divider"></li> <li><a href="#">Separated link</a></li> </ul> </li> </ul> <ul class="nav navbar-nav navbar-right"> <li id="fat-menu" class="dropdown"> <a id="drop3" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Dropdown <span class="caret"></span> </a> <ul class="dropdown-menu" aria-labelledby="drop3"> <li><a href="#">Action</a></li> <li><a href="#">Another action</a></li> <li><a href="#">Something else here</a></li> <li role="separator" class="divider"></li> <li><a href="#">Separated link</a></li> </ul> </li> </ul> </div> </div> </nav>
+			</div>
+		</div>***-->
+		<div class="row">
+			<div class="col-md-10 col_border">
+				<div class="row">
+					<div class="col-md-12 col_border"><!--插入影片-->
+                    <iframe width="853" height="480" src="https://www.youtube.com/embed/EcpZSALxkHc?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+            <div class="col-md-2 col_border">
+            <a href="tea.html"><img src="images/teapot.png" style="width:100%"></a>
+            <!--單一button-->
+            <!--****
+            <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+  LESSON 1
+</button>
+<br/><br/><button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+  LESSON 2
+</button><br/><br/>****-->
+				<!--手風琴button****<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#MOLi" aria-expanded="true" aria-controls="MOLi">
+          button 1
+        </a>
+      </h4>
+    </div>
+    <div id="MOLi" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        lululu
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          button 2
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        lulala
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          button 3
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        lalula
+      </div>
+    </div>
+  </div>
+</div>手風琴button****-->
+			</div>
+		</div>
+        <div class="row">
+			<div class="col-md-8 col_border">
+                <!--牛刀小試-->
+                練習1:<br/>
+                A.<br/>
+                B.<br/>
+                C.<br/>
+                練習2:<br/>
+                A.<br/>
+                B.<br/>
+                C.<br/>
+            </div>
+        </div>
+        <div class="row">
+			<div class="col-md-8 col_border">
+				<div class="row">
+					<div class="col-md-12 col_border"><!--影片資訊-->
+                    第一站：炒菁機操作<br/>
+                    first step.....
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+			<div class="col-md-8 col_border">
+                <!--牛刀小試ANS-->
+                練習1:<br/>
+                ANS：A<br/>
+                練習2:<br/>
+                ANS：B<br/>
+            </div>
+        </div>
+		<div class="row">
+			<div class="col-md-12 col_border" style="text-align:center">
+				國立暨南國際大學 茶理王專題小組<br/>
+                Mail：threepotatoll@gmail.com<br/>
+                地址：南投縣埔里鎮大學路1號
+			</div>
+		</div>
+	</div>
+</body>
+</html>
