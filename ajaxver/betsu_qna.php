@@ -8,9 +8,9 @@
 <script src="jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
 function getA(answerID) {
-	DIV='div001';
+	DIV='div002';
 $.ajax({
-		url: 'loadA.php',
+		url: 'betsu_loadA.php',
 		dataType: 'html',
 		type: 'POST',
 		data: { aid: answerID},
@@ -30,8 +30,10 @@ $.ajax({
 
 <table width="600" border="1">
 <?php
-$_SESSION['qID']="";
-$sqlque = "select count(*) from `question`";
+$_SESSION['cID']="";
+$cid=(int)$_REQUEST['cid'];
+$_SESSION['cID']=$cid;
+$sqlque = "select count(*) from `question` where `cid`=$cid";
 $query=mysqli_query($conn,$sqlque);
 if($sum=mysqli_fetch_array($query)){
     $total=$sum[0];
@@ -39,6 +41,7 @@ if($sum=mysqli_fetch_array($query)){
 else{
     $total=0;
 }
+$_SESSION['qID']="";
 $random=rand(1,$total);
 $_SESSION['qID']=$random;
 $sql = "select * from `question` where qid=$random";

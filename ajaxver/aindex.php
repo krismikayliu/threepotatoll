@@ -56,15 +56,15 @@ $.ajax({
 </head>
 <body>
 <div id='allPage'>
-Tea Question
+<p>Tea Question</p>
+<p>您現在是以 <?php echo $_SESSION["nName"];?> 的身分登入 [<a href=login.php>想要登出？</a>]</p>
 <br/>
 <input type="button" onclick="info()" value="個人資料">
-<input type="button" onclick="" value="排行榜">
+<input type="button" onclick="wrongques()" value="錯誤題目">
 <input type="button" onclick="practice()" value="題目練習">
 <hr>
 <div id='div001'></div>
 <div id='div002'></div>
-<div id='answerDiv'></div>
 </div>
 </body>
 </html>

@@ -14,12 +14,13 @@ if($results=mysqli_query($conn,$sql)) {
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
-function RandomQuestions() {
-	DIV='div001';
+function RandomQuestions(cid) {
+	DIV='div002';
 $.ajax({
-		url: 'qna.php',
+		url: 'betsu_qna.php',
 		dataType: 'html',
 		type: 'POST',
+        data: { cid: cid},
 		error: function(xhr) {
 			$('#'+DIV).html(xhr);
 			},
@@ -35,6 +36,7 @@ $.ajax({
 <td>
 <?php
     $id=$_SESSION['uID'];
+    $cid=$_SESSION['cID'];
     $qid=$_SESSION['qID'];    
     if ($rs['answer']==1){
         echo "yes";
@@ -42,18 +44,18 @@ $.ajax({
         mysqli_query($conn,$sqlplus) or die ("MySQL query error plus");
         $sqltin = "insert into `log`(`id`,`qid`,`truefalse`) values ('$id','$qid','1');";
         mysqli_query($conn,$sqltin) or die ("MySQL query error tin");
-      }
+    }
     else{
         echo "no";
         $sqlfin = "insert into `log`(`id`,`qid`,`truefalse`) values ('$id','$qid','0');";
         mysqli_query($conn,$sqlfin) or die ("MySQL query error fin");
-    }        
+    }
+    echo "<input type='button' onclick='RandomQuestions(",$cid,")' value='下一題'>";   
 ?>
 </td></tr>
 <?php
 }
 ?>
-<input type="button" onclick="RandomQuestions()" value="下一題">
 </body>
 </html>
 

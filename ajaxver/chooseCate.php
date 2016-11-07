@@ -10,7 +10,7 @@ require_once("config.php");
 function C1(chooseCid) {
 	DIV='div002';
 $.ajax({
-		url: 'qna.php',
+		url: 'betsu_qna.php',
 		dataType: 'html',
 		type: 'POST',
         data: { cid: chooseCid},
@@ -25,7 +25,7 @@ $.ajax({
 function C2(chooseCid) {
 	DIV='div002';
 $.ajax({
-		url: 'qna.php',
+		url: 'betsu_qna.php',
 		dataType: 'html',
 		type: 'POST',
         data: { cid: chooseCid},
@@ -40,7 +40,7 @@ $.ajax({
 function C3(chooseCid) {
 	DIV='div002';
 $.ajax({
-		url: 'qna.php',
+		url: 'betsu_qna.php',
 		dataType: 'html',
 		type: 'POST',
         data: { cid: chooseCid},
@@ -55,7 +55,7 @@ $.ajax({
 function C4(chooseCid) {
 	DIV='div002';
 $.ajax({
-		url: 'qna.php',
+		url: 'betsu_qna.php',
 		dataType: 'html',
 		type: 'POST',
         data: { cid: chooseCid},
@@ -70,7 +70,7 @@ $.ajax({
 function C5(chooseCid) {
 	DIV='div002';
 $.ajax({
-		url: 'qna.php',
+		url: 'betsu_qna.php',
 		dataType: 'html',
 		type: 'POST',
         data: { cid: chooseCid},
@@ -87,10 +87,12 @@ $.ajax({
 </head>
 
 <body>
-<input type="button" onclick="C1("1")" value="臺灣茶樹品種與特色茶認識">
-<input type="button" onclick="C2("2")" value="茶葉製造">
-<input type="button" onclick="C3("3")" value="茶葉品質管理">
-<input type="button" onclick="C4("4")" value="食品衛生與工業安全">
-<input type="button" onclick="C5("5")" value="製茶職業道德">
+<input type="button" onclick="C1(1)" value="臺灣茶樹品種與特色茶認識">
+<input type="button" onclick="C2(2)" value="茶葉製造">
+<input type="button" onclick="C3(3)" value="茶葉品質管理">
+<input type="button" onclick="C4(4)" value="食品衛生與工業安全">
+<input type="button" onclick="C5(5)" value="製茶職業道德">
+<br/>
+<hr/>
 </body>
 </html>
