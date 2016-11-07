@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.3.11
+-- version 4.2.11
 -- http://www.phpmyadmin.net
 --
 -- 主機: 127.0.0.1
--- 產生時間： 2016 �?07 ??16 ??23:27
--- 伺服器版本: 5.6.24
--- PHP 版本： 5.6.8
+-- 產生時間： 2016 �?11 ??07 ??12:45
+-- 伺服器版本: 5.6.21
+-- PHP 版本： 5.6.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `category` (
-  `cid` int(11) NOT NULL,
+`cid` int(11) NOT NULL,
   `cname` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
@@ -45,22 +45,59 @@ INSERT INTO `category` (`cid`, `cname`) VALUES
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `lesson`
+-- 資料表結構 `log`
 --
 
-CREATE TABLE IF NOT EXISTS `lesson` (
-  `pid` int(5) NOT NULL,
-  `content` varchar(50) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `qid` int(4) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+CREATE TABLE IF NOT EXISTS `log` (
+`logid` int(11) NOT NULL,
+  `id` varchar(20) COLLATE utf8_unicode_520_ci NOT NULL,
+  `qid` int(11) NOT NULL,
+  `truefalse` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_520_ci;
 
 --
--- 資料表的匯出資料 `lesson`
+-- 資料表的匯出資料 `log`
 --
 
-INSERT INTO `lesson` (`pid`, `content`, `qid`) VALUES
-(1, 'http://images.agoramedia.com/everydayhealth/gcms/6', 1),
-(2, '圖片一的敘述', 1);
+INSERT INTO `log` (`logid`, `id`, `qid`, `truefalse`) VALUES
+(1, '0', 660, 0),
+(2, 'bye', 235, 0),
+(3, 'bye', 424, 0),
+(4, 'bye', 458, 0),
+(5, 'bye', 413, 1),
+(6, 'bye', 363, 0),
+(7, 'bye', 0, 1),
+(8, 'bye', 50, 0),
+(9, 'bye', 36, 0),
+(10, 'bye', 53, 0),
+(11, 'bye', 55, 0),
+(12, 'bye', 11, 0),
+(13, 'bye', 189, 0),
+(14, 'bye', 196, 0),
+(15, 'egg', 235, 0),
+(16, 'egg', 661, 1),
+(17, 'egg', 661, 0),
+(18, 'egg', 661, 0),
+(19, 'egg', 262, 1),
+(20, 'egg', 262, 0),
+(21, 'egg', 358, 0),
+(22, 'egg', 197, 1),
+(23, 'egg', 677, 0),
+(24, 'egg', 677, 0),
+(25, 'egg', 677, 0),
+(26, 'egg', 677, 0),
+(27, 'egg', 677, 0),
+(28, 'egg', 677, 0),
+(29, 'egg', 677, 0),
+(30, 'egg', 677, 1),
+(31, 'egg', 677, 0),
+(32, 'egg', 677, 1),
+(33, 'egg', 677, 0),
+(34, 'egg', 677, 0),
+(35, 'egg', 677, 0),
+(36, 'egg', 677, 0),
+(37, 'egg', 677, 0),
+(38, 'egg', 677, 1);
 
 -- --------------------------------------------------------
 
@@ -69,7 +106,7 @@ INSERT INTO `lesson` (`pid`, `content`, `qid`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `options` (
-  `oid` int(5) NOT NULL,
+`oid` int(5) NOT NULL,
   `woption` varchar(40) COLLATE utf8_unicode_520_ci NOT NULL,
   `answer` tinyint(4) NOT NULL,
   `qid` int(5) NOT NULL
@@ -1217,7 +1254,7 @@ INSERT INTO `options` (`oid`, `woption`, `answer`, `qid`) VALUES
 (1135, '掉出揉捻盤之茶菁可用手撥回', 0, 284),
 (1136, '一開始就必需採重壓揉捻', 0, 284),
 (1137, '茶菁較嫩時揉捻機壓力增大促使成條狀', 0, 285),
-(1138, '茶菁較老時揉捻機壓力減小促使成條狀', 0, 285),
+(1138, '茶菁較老時揉捻機壓力減小 促使成條狀', 0, 285),
 (1139, '茶菁較老時揉捻機壓力增大促使成條狀', 1, 285),
 (1140, '揉捻壓力不影響茶葉成形。', 0, 285),
 (1141, '伊達式揉捻機', 0, 286),
@@ -1600,7 +1637,8 @@ INSERT INTO `options` (`oid`, `woption`, `answer`, `qid`) VALUES
 (1518, '黃綠', 0, 380),
 (1519, '暗綠', 1, 380),
 (1520, '褐綠', 0, 380),
-(1521, ' 粗老	', 1, 381),
+(1521, ' 粗老	', 1, 381);
+INSERT INTO `options` (`oid`, `woption`, `answer`, `qid`) VALUES
 (1522, '幼嫩', 0, 381),
 (1523, '老嫩無拘', 0, 381),
 (1524, '太短', 0, 381),
@@ -2277,8 +2315,7 @@ INSERT INTO `options` (`oid`, `woption`, `answer`, `qid`) VALUES
 (2195, '南', 0, 549),
 (2196, '北', 1, 549),
 (2197, '黑色', 1, 550),
-(2198, '白色', 0, 550);
-INSERT INTO `options` (`oid`, `woption`, `answer`, `qid`) VALUES
+(2198, '白色', 0, 550),
 (2199, '綠色', 0, 550),
 (2200, '棕色', 0, 550),
 (2201, '藍色', 0, 551),
@@ -2881,8 +2918,8 @@ INSERT INTO `options` (`oid`, `woption`, `answer`, `qid`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `question` (
-  `qid` int(5) NOT NULL,
-  `question` varchar(50) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+`qid` int(5) NOT NULL,
+  `question` varchar(100) COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `cid` int(3) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=699 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
@@ -3590,6 +3627,41 @@ INSERT INTO `question` (`qid`, `question`, `cid`) VALUES
 (697, '遇到十分挑剔且要求嚴格的僱主，應該如何處理？', 5),
 (698, '下列何者不是製茶過程互助合作的主要目的？', 5);
 
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `test`
+--
+
+CREATE TABLE IF NOT EXISTS `test` (
+`tid` int(11) NOT NULL,
+  `uid` int(11) NOT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_520_ci;
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `user`
+--
+
+CREATE TABLE IF NOT EXISTS `user` (
+`uid` int(11) NOT NULL,
+  `id` varchar(16) COLLATE utf8_unicode_520_ci NOT NULL,
+  `password` varchar(20) COLLATE utf8_unicode_520_ci NOT NULL,
+  `nickname` varchar(20) COLLATE utf8_unicode_520_ci NOT NULL,
+  `correct` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_520_ci;
+
+--
+-- 資料表的匯出資料 `user`
+--
+
+INSERT INTO `user` (`uid`, `id`, `password`, `nickname`, `correct`) VALUES
+(1, 'aaa', 'aaa', 'aaa', 3),
+(2, 'bye', 'bye', 'bye', 203),
+(3, 'egg', 'egg', 'egg', 7);
+
 --
 -- 已匯出資料表的索引
 --
@@ -3598,25 +3670,37 @@ INSERT INTO `question` (`qid`, `question`, `cid`) VALUES
 -- 資料表索引 `category`
 --
 ALTER TABLE `category`
-  ADD PRIMARY KEY (`cid`);
+ ADD PRIMARY KEY (`cid`);
 
 --
--- 資料表索引 `lesson`
+-- 資料表索引 `log`
 --
-ALTER TABLE `lesson`
-  ADD PRIMARY KEY (`pid`);
+ALTER TABLE `log`
+ ADD PRIMARY KEY (`logid`);
 
 --
 -- 資料表索引 `options`
 --
 ALTER TABLE `options`
-  ADD PRIMARY KEY (`oid`);
+ ADD PRIMARY KEY (`oid`);
 
 --
 -- 資料表索引 `question`
 --
 ALTER TABLE `question`
-  ADD PRIMARY KEY (`qid`);
+ ADD PRIMARY KEY (`qid`);
+
+--
+-- 資料表索引 `test`
+--
+ALTER TABLE `test`
+ ADD PRIMARY KEY (`tid`);
+
+--
+-- 資料表索引 `user`
+--
+ALTER TABLE `user`
+ ADD PRIMARY KEY (`uid`);
 
 --
 -- 在匯出的資料表使用 AUTO_INCREMENT
@@ -3626,22 +3710,32 @@ ALTER TABLE `question`
 -- 使用資料表 AUTO_INCREMENT `category`
 --
 ALTER TABLE `category`
-  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
--- 使用資料表 AUTO_INCREMENT `lesson`
+-- 使用資料表 AUTO_INCREMENT `log`
 --
-ALTER TABLE `lesson`
-  MODIFY `pid` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+ALTER TABLE `log`
+MODIFY `logid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
 --
 -- 使用資料表 AUTO_INCREMENT `options`
 --
 ALTER TABLE `options`
-  MODIFY `oid` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2793;
+MODIFY `oid` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2793;
 --
 -- 使用資料表 AUTO_INCREMENT `question`
 --
 ALTER TABLE `question`
-  MODIFY `qid` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=699;
+MODIFY `qid` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=699;
+--
+-- 使用資料表 AUTO_INCREMENT `test`
+--
+ALTER TABLE `test`
+MODIFY `tid` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- 使用資料表 AUTO_INCREMENT `user`
+--
+ALTER TABLE `user`
+MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
