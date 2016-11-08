@@ -57,7 +57,7 @@ $.ajax({
 <body>
 <div id='allPage'>
 <p>Tea Question</p>
-<p>您現在是以 <?php echo $_SESSION["nName"];?> 的身分登入 [<a href=login.php>想要登出？</a>]</p>
+<p>您現在是以 <?php echo $_SESSION["nName"];?> 的身分登入 [<a href=login.php>想要登出？</a>][<a href="ToT.html">ToT</a>]</p>
 <br/>
 <input type="button" onclick="info()" value="個人資料">
 <input type="button" onclick="wrongques()" value="錯誤題目">
