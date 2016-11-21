@@ -8,7 +8,7 @@ require_once("config.php");
 <script src="jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
 function C1(chooseCid) {
-	DIV='div002';
+	DIV='div001';
 $.ajax({
 		url: 'betsu_qna.php',
 		dataType: 'html',
@@ -23,7 +23,7 @@ $.ajax({
 	});
 }
 function C2(chooseCid) {
-	DIV='div002';
+	DIV='div001';
 $.ajax({
 		url: 'betsu_qna.php',
 		dataType: 'html',
@@ -38,7 +38,7 @@ $.ajax({
 	});
 }
 function C3(chooseCid) {
-	DIV='div002';
+	DIV='div001';
 $.ajax({
 		url: 'betsu_qna.php',
 		dataType: 'html',
@@ -53,7 +53,7 @@ $.ajax({
 	});
 }
 function C4(chooseCid) {
-	DIV='div002';
+	DIV='div001';
 $.ajax({
 		url: 'betsu_qna.php',
 		dataType: 'html',
@@ -68,7 +68,7 @@ $.ajax({
 	});
 }
 function C5(chooseCid) {
-	DIV='div002';
+	DIV='div001';
 $.ajax({
 		url: 'betsu_qna.php',
 		dataType: 'html',

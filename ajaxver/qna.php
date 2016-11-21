@@ -25,10 +25,9 @@ $.ajax({
 </script>
 <title>TEA Question</title>
 </head>
-
 <body>
-
-<table width="600" border="1">
+<div id="q">
+<table id="qtable"><!--題目table-->
 <?php
 $_SESSION['qID']="";
 $sqlque = "select count(*) from `question`";
@@ -53,7 +52,9 @@ while (	$rs=mysqli_fetch_array($results)) {
 }
 ?>
 </table>
-<table width="550" border="1">
+</div>
+<div id="opt">
+<table id="opttable"><!--選項table-->
 <?php
 $sql = "select * from `options` where qid=$random";
 $results=mysqli_query($conn,$sql);
@@ -67,5 +68,6 @@ while (	$rs=mysqli_fetch_array($results)) {
 }
 ?>
 </table>
+</div>
 </body>
 </html>

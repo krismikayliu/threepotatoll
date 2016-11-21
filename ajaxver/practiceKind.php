@@ -40,7 +40,13 @@ $.ajax({
 </head>
 
 <body>
-<input type="button" onclick="BetsuQuestions()" value="分類練習">
-<input type="button" onclick="RandomQuestions()" value="隨機練習">
+<div class="practice">
+    <ul class="pmenu">
+        <li><a href="javascript:BetsuQuestions()"><img src="images/test.png"><br/>分類練習</a></li>
+        <li><a href="javascript:RandomQuestions()"><img src="images/test.png"><br/>隨機練習</a></li>
+    </ul>
+</div>
+<!--<input type="button" onclick="BetsuQuestions()" value="分類練習">
+<input type="button" onclick="RandomQuestions()" value="隨機練習">-->
 </body>
 </html>

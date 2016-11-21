@@ -8,7 +8,7 @@
 <script src="jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
 function getA(answerID) {
-	DIV='div002';
+	DIV='div001';
 $.ajax({
 		url: 'betsu_loadA.php',
 		dataType: 'html',
@@ -27,8 +27,8 @@ $.ajax({
 </head>
 
 <body>
-
-<table width="600" border="1">
+<div id="q">
+<table id="qtable">
 <?php
 $_SESSION['cID']="";
 $cid=(int)$_REQUEST['cid'];
@@ -56,7 +56,9 @@ while (	$rs=mysqli_fetch_array($results)) {
 }
 ?>
 </table>
-<table width="550" border="1">
+</div>
+<div id="opt">
+<table id="opttable">
 <?php
 $sql = "select * from `options` where qid=$random";
 $results=mysqli_query($conn,$sql);
@@ -70,5 +72,6 @@ while (	$rs=mysqli_fetch_array($results)) {
 }
 ?>
 </table>
+</div>
 </body>
 </html>

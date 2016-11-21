@@ -43,6 +43,7 @@ if(isset($_POST['password'])){
 <head>
 <title>indexsample</title>
 
+<link rel="stylesheet" type="text/css" href="css3.css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="jquery.js" type="text/javascript"></script>
 <script type="text/javascript"></script>
@@ -54,94 +55,20 @@ if(isset($_POST['password'])){
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-<style type="text/css">
-	/*
-	col_border:名稱;
-	border-style:邊框的形式;
-	border-width:邊框的寬度;
-	*/
-	.col_border{
-		
-	}
-	.header{
-		margin-top:30px;
-	}
-	.row{
-        margin-bottom: 15px;
-	}
-    #nav{
-        margin-top:50px;
-    }
-    #login{
-        background:#FAEBD7;
-    }
-</style>
 </head>
 <body>
-
+    <div class="nav"><!--網頁最上方navbar-->
+			<div class="logo">
+				<a href="home.php"><img src="images/tealogo.png"></a>
+			</div>
+            <div class="navbar">
+                <ul class="menu">
+                    <li><a href="login.php"><img src="images/logout.png"><br/>Logout</a></li>
+                </ul>
+            </div>
+	</div>
 	<div class="container">
-		<div class="row"><!--logo 4個欄位-->
-			<div class="col-md-4 col_border header">
-				<a href="home.php"><img src="images/tealogo.png" style="width:50%"></a>
-			</div>
-            <div class="col-md-8 col_border" id="nav">
-				<nav id="navbar-example" class="navbar navbar-default navbar-static">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-collapse">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
-                        <div class="collapse navbar-collapse bs-example-js-navbar-collapse">
-                            <ul class="nav navbar-nav">
-                                <li class="dropdown">
-                                    <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">教材<span class="caret"></span> </a>
-                                    <ul class="dropdown-menu" aria-labelledby="drop1">
-                                        <li><a href="video.html">影片教材</a></li>
-                                        <li><a href="tea.html">茶葉辨識</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown">
-                                    <a id="drop2" href="aindex.php" class="dropdown-toggle">考試</a>
-                                </li>
-                                <li class="dropdown">
-                                    <a id="drop4" href="acountManage.php" class="dropdown-toggle">帳號管理</a>
-                                </li>
-                                <li class="dropdown">
-                                    <a id="drop5" href="login.php" class="dropdown-toggle">登出</a>
-                                </li>
-                                <li class="dropdown">
-                                    <a id="drop6" href="ToT.html" class="dropdown-toggle">ToT</a>
-                                </li>
-                            </ul>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li id="fat-menu" class="dropdown">
-                                    <a id="drop3" href="quesManage.php" class="dropdown-toggle"> 題庫管理 </a>
-                                    </ul>
-                                    <!--<a id="drop3" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Dropdown <span class="caret"></span> </a>
-                                    <ul class="dropdown-menu" aria-labelledby="drop3">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
-                                    </ul>-->
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-			</div>
-		</div>
 		<div class="row">
-        <!--<div class="col-md-2 col_border">
-        
-        </div>-->
 		<div class="col-md-8 col_border">
 			<div class="row">
 				<div class="col-md-12 col_border">
@@ -190,21 +117,21 @@ if(isset($_POST['password'])){
 			</div>
 		</div>
             <div class="col-md-4 col_border" id="login"><!--登入-->
-            <h1>Login</h1><hr />
+            <h2>登入</h2><hr />
                 <form method="post" action="login.php">
-                    User Name: <input type="text" name="id"><br/><br/>
-                    Password :&nbsp <input type="password" name="password"><br/>
-                <input type="submit">
+                    使用者名稱:<br/>
+                    <input type="text" name="id"><br/><br/>
+                    密碼 :<br/>
+                    <input type="password" name="password"><br/>
+                <br/><input type="submit">
                 </form>
 			</div>
 		</div>
         <hr>
-		<div class="row">
-			<div class="col-md-12 col_border" style="text-align:center">
-                國立暨南國際大學 茶理王專題小組<br/>
-                Mail：threepotatoll@gmail.com<br/>
-                地址：南投縣埔里鎮大學路1號
-			</div>
+		<div class="bottom"><!--頁尾-->
+			國立暨南國際大學 茶理王專題小組<br/>
+            Mail：threepotatoll@gmail.com<br/>
+            地址：南投縣埔里鎮大學路1號
 		</div>
     </div>
 </body>

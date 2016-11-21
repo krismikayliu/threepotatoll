@@ -5,12 +5,14 @@ require_once("config.php");
 <!-- DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" -->
 <html xmlns="http://www.w3.org/1999/xhtml"  style="height: 100%;">
 <head>
+<title>test</title>
+
+<link rel="stylesheet" type="text/css" href="css3.css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
-
 function loadQuestions() {
-	DIV='div002';
+	DIV='div001';
 $.ajax({
 		url: 'qna.php',
 		dataType: 'html',
@@ -38,7 +40,7 @@ $.ajax({
 	});
 }
 function practice() {
-	DIV='div001';
+	DIV='div002';
 $.ajax({
 		url: 'practiceKind.php',
 		dataType: 'html',
@@ -53,18 +55,55 @@ $.ajax({
 }
 
 </script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-1.12.1.min.js" integrity="sha256-I1nTg78tSrZev3kjvfdM5A5Ak/blglGzlaZANLPDl3I=" crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
 </head>
 <body>
-<div id='allPage'>
-<p>Tea Question</p>
-<p>您現在是以 <?php echo $_SESSION["nName"];?> 的身分登入 [<a href=login.php>想要登出？</a>][<a href="ToT.html">ToT</a>]</p>
-<br/>
-<input type="button" onclick="info()" value="個人資料">
-<input type="button" onclick="wrongques()" value="錯誤題目">
-<input type="button" onclick="practice()" value="題目練習">
-<hr>
-<div id='div001'></div>
-<div id='div002'></div>
-</div>
+    <div class="nav"><!--網頁最上方navbar-->
+        <div class="logo">
+            <a href="ToT.html"><img src="images/tealogo.png"></a>
+        </div>
+        <div class="navbar">
+            <ul class="menu">
+                <!--<li id="name2"><?php echo $_SESSION["nName"];?> 您好</li>-->
+                <li><a href="ToT.html"><img src="images/home2.png"><br/>Home</a></li>
+                <li><a href="teach.php"><img src="images/teach.png"><br/>Teach</a></li>
+                <li><a href="javascript:info()"><img src="images/personal_info.png"><br/>個人資料</a></li>
+                <li><a href="login.php"><img src="images/logout.png"><br/>Logout</a></li>
+            </ul>
+        </div>
+        <div id="name"><?php echo $_SESSION["nName"];?> 您好</div>
+	</div>
+    <div class="container"><!--全版面-->
+        <div class="question">
+        <div class="divh1">Tea Question</div>
+            <!--<p>您現在是以 <?php echo $_SESSION["nName"];?> 的身分登入</p>-->
+            <br/>
+            <!--<input type="button" onclick="info()" value="個人資料">
+            <input type="button" onclick="wrongques()" value="錯誤題目">
+            <input type="button" onclick="practice()" value="題目練習">-->
+            <div class="practice">
+                <ul class="pmenu">
+                    <li><a href="javascript:wrongques()"><img src="images/home2.png"><br/>錯誤題目</a></li>
+                    <li><a href="javascript:practice()"><img src="images/teach.png"><br/>題目練習</a></li>
+                </ul>
+                <div id='div002'></div>
+            </div>
+            <div id='div001'></div>
+        </div>
+        <hr>
+		<div class="bottom"><!--頁尾-->
+			國立暨南國際大學 茶理王專題小組<br/>
+            Mail：threepotatoll@gmail.com<br/>
+            地址：南投縣埔里鎮大學路1號
+		</div>
+    </div>
 </body>
 </html>

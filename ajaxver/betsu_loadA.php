@@ -1,4 +1,3 @@
-
 <?php
 require_once("config.php");
     
@@ -15,7 +14,7 @@ if($results=mysqli_query($conn,$sql)) {
 <script src="jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
 function RandomQuestions(cid) {
-	DIV='div002';
+	DIV='div001';
 $.ajax({
 		url: 'betsu_qna.php',
 		dataType: 'html',
