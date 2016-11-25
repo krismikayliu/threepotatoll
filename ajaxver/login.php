@@ -44,6 +44,9 @@ if(isset($_POST['password'])){
 <title>indexsample</title>
 
 <link rel="stylesheet" type="text/css" href="css3.css">
+<link rel="stylesheet" href="animations.css">
+<link rel="stylesheet" href="hover-min.css">
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="jquery.js" type="text/javascript"></script>
 <script type="text/javascript"></script>
@@ -116,12 +119,12 @@ if(isset($_POST['password'])){
 				</div>
 			</div>
 		</div>
-            <div class="col-md-4 col_border" id="login"><!--登入-->
+            <div class="col-md-4" id="login"><!--登入-->
             <h2>登入</h2><hr />
                 <form method="post" action="login.php">
-                    使用者名稱:<br/>
-                    <input type="text" name="id"><br/><br/>
-                    密碼 :<br/>
+                    <div id="loginbox">使用者名稱<br/></div>
+                    <input type="text" name="id">
+                    <div id="loginbox">密碼<br/></div>
                     <input type="password" name="password"><br/>
                 <br/><input type="submit">
                 </form>

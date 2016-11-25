@@ -6,6 +6,8 @@ require_once("config.php");
 <html xmlns="http://www.w3.org/1999/xhtml"  style="height: 100%;">
 <head>
 <title>info</title>
+
+<link rel="stylesheet" type="text/css" href="css3.css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="jquery.js" type="text/javascript"></script>
 <script type="text/javascript"></script>
@@ -19,8 +21,54 @@ require_once("config.php");
 
 </head>
 <body>
-    <div class="infopart" id="infopart"><!--主任資訊-->
-    <div class="divh1">資訊</div>
+    <div class="infopart" id="infopart">
+    <div class="divh1">茶類加工基本流程</div>
+        <div class="steps">
+            <a href="#infopart"><div class="step1" id="stepbt">萎凋</div></a>
+            <a href="#part1"><div class="step2" id="stepbt">攪拌</div></a>
+            <a href="#part2"><div class="step3" id="stepbt">炒菁</div></a>
+            <a href="#part3"><div class="step4" id="stepbt">揉捻</div></a>
+            <a href="#part4"><div class="step5" id="stepbt">乾燥</div></a>
+        </div>
+        <div class="stepcontent">
+            <div id="part1">萎凋的意義與目的</div>
+            <div id="part2">攪拌的意義及目的</div>
+            <div id="part3">炒菁的意義與目的</div>
+            <div id="part4">揉捻的意義與目的</div>
+            <div id="part5">乾燥的意義與目的</div>
+        </div>
+        <div class="growall">
+            <div class="grow1" id="grow">
+                <div id="growpic"><img src="images/grow1.png"></div>
+                <div id="growdes"><p>種子期Seed Stage</p>
+                自開花至果實成熟，種子期約一年。<br/>
+                It takes 1 year for a seed to mature after blossom.</div>
+            </div>
+            <div class="grow2" id="grow">
+                <div id="growpic"><img src="images/grow2.png"></div>
+                <div id="growdes"><p>幼苗期Sprout Stage</p>
+                由種子萌發至真葉展開三至五片，一般約1至2年。<br/>
+                It takes 1 to 2 years for a sprout to grow to an open leaf plant with 3 to 5 leaves.</div>
+            </div>
+            <div class="grow3" id="grow">
+                <div id="growpic"><img src="images/grow3.png"></div>
+                <div id="growdes"><p>幼年期Young Plant Stage</p>
+                又稱「幼木期」，一般約3至5年。<br/>
+                Also called “Young Wood Age,” lasts about 3 to 5 years.</div>
+            </div>
+            <div class="grow4" id="grow">
+                <div id="growpic"><img src="images/grow4.png"></div>
+                <div id="growdes"><p>成年期Adulthood</p>
+                又稱「成木期」，一般約為20至30年。<br/>
+                Also called “Mature Plant Stage,”and lasts 20 to 30 years.</div>
+            </div>
+            <div class="grow5" id="grow">
+                <div id="growpic"><img src="images/grow5.png"></div>
+                <div id="growdes"><p>衰老期Old Age</p>
+                直到茶樹株死亡為止。一般經濟栽培年線約30至50年。<br/>
+                This stage lasts from adulthood to when the plant dies. It usually takes 30 to 50 years for a plant to die.</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

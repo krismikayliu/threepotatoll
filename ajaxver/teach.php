@@ -8,6 +8,9 @@ require_once("config.php");
 <title>teach</title>
 
 <link rel="stylesheet" type="text/css" href="css3.css">
+<link rel="stylesheet" href="animations.css">
+<link rel="stylesheet" href="hover-min.css">
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -65,26 +68,31 @@ $.ajax({
 <body>
     <div class="nav"><!--網頁最上方navbar-->
         <div class="logo">
-            <a href="ToT.html"><img src="images/tealogo.png"></a>
+            <a href="ToT.html" class="hvr-hang"><img src="images/tealogo.png"></a>
         </div>
         <div class="navbar">
             <ul class="menu">
-                <li><a href="ToT.html"><img src="images/homehover.png"><br/>Home</a></li>
-                <li><a href="aindex.php"><img src="images/test.png"><br/>Test</a></li>
-                <li><a href="javascript:calltea()"><img src="images/teach.png"><br/>茶葉辨識</a></li>
-                <li><a href="javascript:callvideo()"><img src="images/video.png"><br/>影片教材</a>
-                    <!--<ul class="menu2">
+                <li><a href="ToT.html" class="hvr-grow"><img src="images/homehover.png"><br/>Home</a></li>
+                <li><a href="aindex.php" class="hvr-grow"><img src="images/testhover.png"><br/>Test</a></li>
+                <!--<li><a href="javascript:calltea()" class="hvr-grow"><img src="images/teachhover.png"><br/>茶葉辨識</a></li>
+                <li><a href="javascript:callvideo()" class="hvr-grow"><img src="images/videohover.png"><br/>影片教材</a>
+                    <ul class="menu2">
                     <li><a href="">第一站</a></li>
                     <li><a href="">第二站</a></li>
                     <li><a href="">第三站</a></li>
-                    </ul>-->
+                    </ul>
                 </li>
-                <li><a href="javascript:callinfo()"><img src="images/teach.png"><br/>主任資訊</a></li>
-                <li><a href="login.php"><img src="images/logout.png"><br/>Logout</a></li>
+                <li><a href="javascript:callinfo()" class="hvr-grow"><img src="images/teachhover.png"><br/>主任資訊</a></li>-->
+                <li><a href="login.php" class="hvr-grow"><img src="images/logouthover.png"><br/>Logout</a></li>
             </ul>
         </div>
     </div>
-	<div class="container"><!--全版面-->
+    <div id="sidenav"><!--sidenav-->
+        <a href="javascript:calltea()"><div id="sidenavbt" class="hvr-grow">茶葉辨識</div></a>
+        <a href="javascript:callvideo()"><div id="sidenavbt" class="hvr-grow">影片教材</div></a>
+        <a href="javascript:callinfo()"><div id="sidenavbt" class="hvr-grow">主任資訊</div></a>
+    </div>
+	<div class="container">
         <div id="content">
             
         </div>

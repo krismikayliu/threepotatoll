@@ -8,6 +8,9 @@ require_once("config.php");
 <title>test</title>
 
 <link rel="stylesheet" type="text/css" href="css3.css">
+<link rel="stylesheet" href="animations.css">
+<link rel="stylesheet" href="hover-min.css">
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -81,21 +84,23 @@ $.ajax({
         </div>
         <div id="name"><?php echo $_SESSION["nName"];?> 您好</div>
 	</div>
+        <div id="sidenav"><!--sidenav-->
+        <a href="javascript:wrongques()"><div id="sidenavbt" class="hvr-grow">錯誤題目</div></a>
+        <a href="javascript:practice()"><div id="sidenavbt" class="hvr-grow">題目練習</div></a>
+        <div id='div002'></div>
+    </div>
     <div class="container"><!--全版面-->
         <div class="question">
         <div class="divh1">Tea Question</div>
             <!--<p>您現在是以 <?php echo $_SESSION["nName"];?> 的身分登入</p>-->
             <br/>
-            <!--<input type="button" onclick="info()" value="個人資料">
-            <input type="button" onclick="wrongques()" value="錯誤題目">
-            <input type="button" onclick="practice()" value="題目練習">-->
-            <div class="practice">
+            <!--<div class="practice">
                 <ul class="pmenu">
                     <li><a href="javascript:wrongques()"><img src="images/home2.png"><br/>錯誤題目</a></li>
                     <li><a href="javascript:practice()"><img src="images/teach.png"><br/>題目練習</a></li>
                 </ul>
                 <div id='div002'></div>
-            </div>
+            </div>-->
             <div id='div001'></div>
         </div>
         <hr>
