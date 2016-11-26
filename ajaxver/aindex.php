@@ -28,6 +28,20 @@ $.ajax({
 			}
 	});
 }
+function wrongrank() {
+	DIV='div001';
+$.ajax({
+		url: 'wrongRank.php',
+		dataType: 'html',
+		type: 'POST',
+		error: function(xhr) {
+			$('#'+DIV).html(xhr);
+			},
+		success: function(response) {
+			$('#'+DIV).html(response); //set the html content of the object msg
+			}
+	});
+}
 function info() {
 	DIV='div001';
 $.ajax({
@@ -76,6 +90,7 @@ $.ajax({
         <div class="navbar">
             <ul class="menu">
                 <!--<li id="name2"><?php echo $_SESSION["nName"];?> 您好</li>-->
+                <li><a href="editAcc.php"><br/>帳號管理(還沒寫好)</a></li>
                 <li><a href="ToT.html"><img src="images/home2.png"><br/>Home</a></li>
                 <li><a href="teach.php"><img src="images/teach.png"><br/>Teach</a></li>
                 <li><a href="javascript:info()"><img src="images/personal_info.png"><br/>個人資料</a></li>
@@ -87,6 +102,7 @@ $.ajax({
         <div id="sidenav"><!--sidenav-->
         <a href="javascript:wrongques()"><div id="sidenavbt" class="hvr-grow">錯誤題目</div></a>
         <a href="javascript:practice()"><div id="sidenavbt" class="hvr-grow">題目練習</div></a>
+        <a href="javascript:wrongrank()"><div id="sidenavbt" class="hvr-grow">錯題榜</div></a>
         <div id='div002'></div>
     </div>
     <div class="container"><!--全版面-->
