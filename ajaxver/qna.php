@@ -46,8 +46,8 @@ $results=mysqli_query($conn,$sql);
 while (	$rs=mysqli_fetch_array($results)) {
 
 	echo "<tr>
-	<td>" , $rs['qid'] ,"</td>
-	<td>" , $rs['question'],"</td>
+	<td width='100px' align='center' background='images/testq-01.png'>" , $rs['qid'] ,"</td>
+	<td background='images/testq-02.png'>" , $rs['question'],"</td>
     </tr>";
 }
 ?>
@@ -62,7 +62,7 @@ $results=mysqli_query($conn,$sql);
 while (	$rs=mysqli_fetch_array($results)) {
 
 	echo "<tr>
-    <td>" , $rs['woption'],"</td>
+    <td width='450px' background='images/testans-01.png'>" , $rs['woption'],"</td>
     <td>", "<input type='button' value='選擇' onclick='getA(" , $rs['oid'] ,")'>","</td>
     </tr>";
 }

@@ -26,8 +26,8 @@ if(isset($_POST['password'])){
 			if ($row=mysqli_fetch_array($result)) {
 				$_SESSION['uID'] = $row['id'];
 				$_SESSION['nName'] = $row['nickname'];
-				header("Location:ToT.html");
-				echo "<a href='ToT.html'>go</a>";
+				header("Location:ToT.php");
+				echo "<a href='ToT.php'>go</a>";
 				exit(0);
 			} else {
 				echo "Invalid Username or Password - Please try again <br />";
@@ -41,7 +41,7 @@ if(isset($_POST['password'])){
 <!-- DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" -->
 <html xmlns="http://www.w3.org/1999/xhtml"  style="height: 100%;">
 <head>
-<title>indexsample</title>
+<title>index</title>
 
 <link rel="stylesheet" type="text/css" href="css3.css">
 <link rel="stylesheet" href="animations.css">
@@ -62,13 +62,8 @@ if(isset($_POST['password'])){
 <body>
     <div class="nav"><!--網頁最上方navbar-->
 			<div class="logo">
-				<a href="home.php"><img src="images/tealogo.png"></a>
+				<img src="images/tealogo.png">
 			</div>
-            <div class="navbar">
-                <ul class="menu">
-                    <li><a href="login.php"><img src="images/logout.png"><br/>Logout</a></li>
-                </ul>
-            </div>
 	</div>
 	<div class="container">
 		<div class="row">
@@ -87,21 +82,21 @@ if(isset($_POST['password'])){
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="images/photo1.jpg" alt="工廠">
+      <img src="images/login1.png" alt="">
       <div class="carousel-caption">
-        工廠
+        茶藝課上課情形
       </div>
     </div>
     <div class="item">
-      <img src="images/photo2.jpg" alt="樹樹">
+      <img src="images/login3.png" alt="">
       <div class="carousel-caption">
-        樹樹
+        老師在教導學生作茶葉種類辨識
       </div>
     </div>
     <div class="item 3">
-      <img src="images/photo3.jpg" alt="氣球球">
+      <img src="images/login4.png" alt="">
       <div class="carousel-caption">
-        氣球球
+        與林家如校長訪談側拍
       </div>
     </div>
   </div>

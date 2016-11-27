@@ -3,13 +3,16 @@ col_border:名稱;
 border-style:邊框的形式;
 border-width:邊框的寬度;
 */
-body{
-    background:gray;
-}
+/*body{
+    height: 100%;
+    //background:gray;
+    background-image: -webkit-linear-gradient(#00a99d,#0071bc);
+    background: -o-linear-gradient(#00a99d,#0071bc);
+    background: -moz-linear-gradient(#00a99d,#0071bc);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}*/
 .container{
-    //background-color:pink;
-    //background: -webkit-linear-gradient(yellow,red);
-    //background: -webkit-radial-gradient(circle,white,orange);
     margin-top:100px;
 }
 .col_border{
@@ -21,6 +24,7 @@ body{
 }
 #login{
     background-color:#FAEBD7;
+    font-family:微軟正黑體;
     width:350px;
     margin-left:20px;
     -webkit-box-shadow: #999 0px 2px 10px;/*陰影*/
@@ -36,7 +40,7 @@ body{
     margin-top:8px;
 }
 .nav{
-    background-color:#b3b3b3;/*置頂bar顏色*/
+    background-color:ivory;/*置頂bar顏色*/
     height:80px;
     width:100%;
     position:fixed; /*固定位置定位*/
@@ -88,6 +92,7 @@ body{
     padding: 5px 0px;/* button邊框 */
     margin-top:10px;/* new */
     text-align:center;
+    font-family:微軟正黑體;
 }
 .menu li img{
     width:40px;
@@ -134,6 +139,7 @@ body{
 #sidenav a{
     color:black;
     font-size:12pt;
+    font-family:微軟正黑體;
     text-decoration:none;
 }
 #sidenavbt{
@@ -162,25 +168,25 @@ body{
     padding:8px 5px;
     margin-right:10px;
     text-align:center;
-    width:160px;
+    width:170px;
     //margin-left:22%;
     float:left;
 }
 #choose{
     //background-color:yellow;
     margin:0 auto;
-    margin-top:70px;
+    margin-top:30px;
 }
 .teach{
     //background-color:pink;
     float:left;
-    margin-left:180px;
+    margin-left:150px;
     //margin-left:15%;
 }
 .test{
     //background-color:red;
     float:left;
-    //margin-left:0px;
+    margin-left:50px;
 }
 #choosebt{
     width:400px;
@@ -224,8 +230,10 @@ body{
     height:220px;
 }
 #zonlun2{
-    font-size:18pt;
-    padding:15px;
+    font-size:14pt;
+    line-height:24pt;
+    padding:10px;
+    font-family:微軟正黑體;
 }
 .teapart{
     //background-color:gray;
@@ -282,17 +290,33 @@ body{
     //margin-left:0px;
     width:95%;
 }
-#info{
+.info1,.info2{
     background-color:#e6e6e6;
     width:95%;
+    font-family:微軟正黑體;
     padding:5px 0px 5px 10px;
     margin-top:10px;
     -webkit-box-shadow:1px 1px 5px #ccc;/*div陰影*/
     -moz-box-shadow:1px 1px 5px #ccc; /*陰影for Firefox*/
     box-shadow:1px 1px 5px #ccc; /*陰影for IE*/
 }
+.info3{
+    background-color:#e6e6e6;
+    width:95%;
+    font-family:微軟正黑體;
+    padding:5px 0px 5px 10px;
+    margin-top:10px;
+    -webkit-box-shadow:1px 1px 5px #ccc;/*div陰影*/
+    -moz-box-shadow:1px 1px 5px #ccc; /*陰影for Firefox*/
+    box-shadow:1px 1px 5px #ccc; /*陰影for IE*/
+    opacity:0.3;
+}
 #info:hover{
     background-color:#d9d9d9;
+}
+.info3:hover{
+    //background-color:#d9d9d9;
+    opacity:1.0;
 }
 #right{
     //background-color:tomato;
@@ -368,9 +392,20 @@ body{
     font-size:15px;
 }
 .question{
-    background-color:#999;
-    height:600px;
+    //background-color:#999;
+    height:580px;
+    width:1000px;
     margin-left:10%;
+    /*background-image: -webkit-linear-gradient(rgba(0, 169, 157,0.1),rgba(0, 113, 188,0.8));
+    //background-image: -webkit-linear-gradient(#00a99d,#0071bc);
+    //background: -o-linear-gradient(#00a99d,#0071bc);
+    //background: -moz-linear-gradient(#00a99d,#0071bc);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-box-shadow: #999 0px 3px 5px;/*陰影*
+    -moz-box-shadow: #999 0px 3px 5px; /*陰影for Firefox*
+    box-shadow: #999 0px 3px 5px; /*陰影for IE*/
+    //background-image:url("images/testbackgroundf3-01.png");
 }
 /* .practice{
     float:left;
@@ -403,13 +438,15 @@ body{
     //float:right;
 }
 #qtable{
-    border: 3px solid black;
-    height:60px;
-    width:600px;
+    //border: 3px solid black;
+    height:100px;
+    width:550px;
     //background-color:yellow;
+    font-family:微軟正黑體;
 }
 #qtable td {
-    border: 1px solid black;
+    //border: 1px solid black;
+    padding-left:8px;
     //background-color:#999;
 }
 #opt{
@@ -419,17 +456,74 @@ body{
     //float:right;
 }
 #opttable {
-    border: 3px solid black;
+    //border: 3px solid black;
     //height:60px;
     width:600px;
-    background-color:pink;
+    //background-color:pink;
+    font-family:微軟正黑體;
 }
 #opttable tr {
-    border: 1px solid black;
-    height:60px;
+    //border: 1px solid black;
+    height:80px;
     //width:600px;
+    //background-color:pink;
+    padding:40px;
+}
+#opttable td {
+    //border: 1px solid black;
+    padding-left:20px;
+    //background-color:#999;
+}
+#wrong{
+    background-color:skyblue;
+    height:600px;
+    width:800px;
+}
+#wrongtable{
+    border:3px solid black;
+    //height:60px;
+    width:600px;
+    //background-color:pink;
+    font-family:微軟正黑體;
+}
+#wrongtable td {
+    border: 1px solid black;
+    padding-left:20px;
+    //background-color:#999;
+}
+#exp{
     background-color:pink;
-    padding: 40px;
+    height:600px;
+    width:800px;
+}
+#exptable{
+    border:3px solid black;
+    //height:60px;
+    width:600px;
+    //background-color:pink;
+    font-family:微軟正黑體;
+}
+#exptable td{
+    border: 1px solid black;
+    padding-left:20px;
+    //background-color:#999;
+}
+#wq{
+    background-color:yellow;
+    height:600px;
+    width:800px;
+}
+#wqtable{
+    border:3px solid black;
+    //height:60px;
+    width:600px;
+    //background-color:pink;
+    font-family:微軟正黑體;
+}
+#wqtable td{
+    border: 1px solid black;
+    padding-left:20px;
+    //background-color:#999;
 }
 .divh1{
     background:tomato;
@@ -445,12 +539,14 @@ body{
     //background-color:yellow;
 }
 #div001{
-    background-color:skyblue;
-    margin-left:100px;
+    //background-color:skyblue;
+    margin-left:150px;
+    margin-top:50px;
 }
 .bottom{
     margin-bottom: 15px;
     text-align:center;
+    font-family:微軟正黑體;
 }
 /*浮動Bar
 #top-bar{

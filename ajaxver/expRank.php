@@ -12,11 +12,11 @@
 <title>TEA Question</title>
 </head>
 <body>
-<div id="q">
-<table id="qtable"><!--題目table-->
+<div id="exp">
+<table id="exptable"><!--題目table-->
   <tr>
-    <td>名次</td>
-    <td>user</td>
+    <td height="40px" width="100px">名次</td>
+    <td width="300px">user</td>
     <td>經驗值</td>
   </tr>
 <?php
@@ -28,7 +28,7 @@ $rank=1;
 while (	$rs=mysqli_fetch_array($results)) {
 
 	echo "<tr>
-    <td>" , $rank ,"</td>
+    <td height='30px'>" , $rank ,"</td>
 	<td>" , $rs['id'] ,"</td>
 	<td>" , $rs['exp'],"</td>
     </tr>";

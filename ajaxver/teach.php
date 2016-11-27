@@ -68,11 +68,10 @@ $.ajax({
 <body>
     <div class="nav"><!--網頁最上方navbar-->
         <div class="logo">
-            <a href="ToT.html" class="hvr-hang"><img src="images/tealogo.png"></a>
+            <a href="ToT.php" class="hvr-hang"><img src="images/tealogo.png"></a>
         </div>
         <div class="navbar">
             <ul class="menu">
-                <li><a href="ToT.html" class="hvr-grow"><img src="images/homehover.png"><br/>Home</a></li>
                 <li><a href="aindex.php" class="hvr-grow"><img src="images/testhover.png"><br/>Test</a></li>
                 <!--<li><a href="javascript:calltea()" class="hvr-grow"><img src="images/teachhover.png"><br/>茶葉辨識</a></li>
                 <li><a href="javascript:callvideo()" class="hvr-grow"><img src="images/videohover.png"><br/>影片教材</a>
@@ -86,11 +85,12 @@ $.ajax({
                 <li><a href="login.php" class="hvr-grow"><img src="images/logouthover.png"><br/>Logout</a></li>
             </ul>
         </div>
+        <div id="name"><?php echo $_SESSION["nName"];?> 您好</div>
     </div>
     <div id="sidenav"><!--sidenav-->
         <a href="javascript:calltea()"><div id="sidenavbt" class="hvr-grow">茶葉辨識</div></a>
         <a href="javascript:callvideo()"><div id="sidenavbt" class="hvr-grow">影片教材</div></a>
-        <a href="javascript:callinfo()"><div id="sidenavbt" class="hvr-grow">主任資訊</div></a>
+        <a href="javascript:callinfo()"><div id="sidenavbt" class="hvr-grow">茶葉小教室</div></a>
     </div>
 	<div class="container">
         <div id="content">
@@ -100,15 +100,28 @@ $.ajax({
             <!--<h2>這裡先放課堂總論</h2>-->
             <div class="box1" id="box">
                 <div id="zonlun"><img src="images/tea1.jpg"></div>
-                <div id="zonlun2">茶葉辨識</div>
+                <div id="zonlun2">
+                <b style="font-size:18pt">茶葉辨識</b><br/>
+                從專業教材內容中擷取茶葉圖片，再配合文字敘述，七種茶的特色都能簡易明瞭。
+                </div>
             </div>
             <div class="box2" id="box">
                 <div id="zonlun"><img src="images/tea2.jpg"></div>
-                <div id="zonlun2">影片教學</div>
+                <div id="zonlun2" style="font-size:12pt;line-height:20pt">
+                <b style="font-size:18pt">影片教學</b><br/>
+                此部份分為三支影片：<br/>
+                1.炒菁機操作<br/>2.茶葉炒菁<br/>3.揉捻機操作<br/>
+                內容除了包含操作流程及講解外，更將操作流程放在下方資訊欄，方便重複觀看，
+                每個影片下方更有牛刀小試來測驗是否完整理解本影片。
+                </div>
             </div>
             <div class="box3" id="box">
                 <div id="zonlun"><img src="images/tea3.jpg"></div>
-                <div id="zonlun2">主任資訊</div>
+                <div id="zonlun2">
+                <b style="font-size:18pt">茶葉小教室</b><br/>
+                這部分的內容多半為課外補充之教材，雖不在製茶師考試的範圍內，
+                但透過這部份更能全方位了解有關茶的知識。
+                </div>
             </div>
         </div>
         <hr>

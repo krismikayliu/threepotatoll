@@ -9,16 +9,11 @@
 <script type="text/javascript">
 
 </script>
-
 <title>TEA Question</title>
 </head>
-
 <body>
-
-<p>答錯過的題目將在此呈現</p>
-
-<div id="q">
-<table id="qtable">
+<div id="wq">
+<table id="wqtable">
   <tr>
     <td>題號</td>
     <td>題目</td>
@@ -50,6 +45,5 @@ while (	$rs=mysqli_fetch_array($results)) {
 ?>
 </table>
 </div>
-
 </body>
 </html>

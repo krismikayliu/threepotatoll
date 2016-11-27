@@ -12,8 +12,8 @@
 <title>TEA Question</title>
 </head>
 <body>
-<div id="q">
-<table id="qtable"><!--題目table-->
+<div id="wrong">
+<table id="wrongtable"><!--題目table-->
   <tr>
     <td>名次</td>
     <td>題號</td>

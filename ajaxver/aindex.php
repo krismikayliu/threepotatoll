@@ -113,13 +113,11 @@ $.ajax({
 <body>
     <div class="nav"><!--網頁最上方navbar-->
         <div class="logo">
-            <a href="ToT.html"><img src="images/tealogo.png"></a>
+            <a href="ToT.php" class="hvr-hang"><img src="images/tealogo.png"></a>
         </div>
         <div class="navbar">
             <ul class="menu">
-                <!--<li id="name2"><?php echo $_SESSION["nName"];?> 您好</li>-->
-                <li><a href="editAcc.php"><br/>帳號管理(還沒寫好)</a></li>
-                <li><a href="ToT.html"><img src="images/home2.png"><br/>Home</a></li>
+                <!--<li><a href="editAcc.php"><br/>帳號管理(還沒寫好)</a></li>-->
                 <li><a href="teach.php"><img src="images/teach.png"><br/>Teach</a></li>
                 <li><a href="javascript:info()"><img src="images/personal_info.png"><br/>個人資料</a></li>
                 <li><a href="login.php"><img src="images/logout.png"><br/>Logout</a></li>
@@ -127,16 +125,16 @@ $.ajax({
         </div>
         <div id="name"><?php echo $_SESSION["nName"];?> 您好</div>
 	</div>
-        <div id="sidenav"><!--sidenav-->
-        <a href="javascript:wrongques()"><div id="sidenavbt" class="hvr-grow">錯誤題目</div></a>
-        <a href="javascript:practice()"><div id="sidenavbt" class="hvr-grow">題目練習</div></a>
-        <a href="javascript:wrongrank()"><div id="sidenavbt" class="hvr-grow">錯題榜</div></a>
+    <div id="sidenav"><!--sidenav-->
         <a href="javascript:exprank()"><div id="sidenavbt" class="hvr-grow">排行榜</div></a>
+        <a href="javascript:wrongques()"><div id="sidenavbt" class="hvr-grow">錯誤題目</div></a>
+        <a href="javascript:wrongrank()"><div id="sidenavbt" class="hvr-grow">錯題榜</div></a>
+        <a href="javascript:practice()"><div id="sidenavbt" class="hvr-grow">題目練習</div></a>
         <div id='div002'></div>
     </div>
     <div class="container"><!--全版面-->
         <div class="question">
-        <div class="divh1">Tea Question</div>
+        <!--<div class="divh1">Tea Question</div>-->
             <!--<p>您現在是以 <?php echo $_SESSION["nName"];?> 的身分登入</p>-->
             <br/>
             <!--<div class="practice">
