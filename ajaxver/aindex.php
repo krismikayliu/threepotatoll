@@ -28,10 +28,38 @@ $.ajax({
 			}
 	});
 }
+function wrongques() {
+	DIV='div001';
+$.ajax({
+		url: 'wrongQues.php',
+		dataType: 'html',
+		type: 'POST',
+		error: function(xhr) {
+			$('#'+DIV).html(xhr);
+			},
+		success: function(response) {
+			$('#'+DIV).html(response); //set the html content of the object msg
+			}
+	});
+}
 function wrongrank() {
 	DIV='div001';
 $.ajax({
 		url: 'wrongRank.php',
+		dataType: 'html',
+		type: 'POST',
+		error: function(xhr) {
+			$('#'+DIV).html(xhr);
+			},
+		success: function(response) {
+			$('#'+DIV).html(response); //set the html content of the object msg
+			}
+	});
+}
+function exprank() {
+	DIV='div001';
+$.ajax({
+		url: 'expRank.php',
 		dataType: 'html',
 		type: 'POST',
 		error: function(xhr) {
@@ -103,6 +131,7 @@ $.ajax({
         <a href="javascript:wrongques()"><div id="sidenavbt" class="hvr-grow">錯誤題目</div></a>
         <a href="javascript:practice()"><div id="sidenavbt" class="hvr-grow">題目練習</div></a>
         <a href="javascript:wrongrank()"><div id="sidenavbt" class="hvr-grow">錯題榜</div></a>
+        <a href="javascript:exprank()"><div id="sidenavbt" class="hvr-grow">排行榜</div></a>
         <div id='div002'></div>
     </div>
     <div class="container"><!--全版面-->
