@@ -7,27 +7,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
-function getA(answerID) {
-	DIV='div001';
-$.ajax({
-		url: 'loadA.php',
-		dataType: 'html',
-		type: 'POST',
-		data: { aid: answerID},
-		error: function(xhr) {
-			$('#'+DIV).html(xhr);
-			},
-		success: function(response) {
-			$('#'+DIV).html(response); //set the html content of the object msg
-			}
-	});
-}
+
 </script>
 <title>TEA Question</title>
 </head>
 <body>
 <div id="q">
 <table id="qtable"><!--題目table-->
+  <tr>
+    <td>名次</td>
+    <td>題號</td>
+    <td>錯誤率</td>
+  </tr>
 <?php
 
 $sqlque = "select count(*) from `log`";
@@ -40,13 +31,17 @@ else{
 }
 $sql = "select `qid`,ROUND(count(qid)/$total*100,1) AS wrongsum from `log` where `truefalse`='0' group by `qid` order by wrongsum desc";
 $results=mysqli_query($conn,$sql);
+$rank=1;
 
 while (	$rs=mysqli_fetch_array($results)) {
 
 	echo "<tr>
+    <td>" , $rank ,"</td>
 	<td>NO." , $rs['qid'] ,"</td>
 	<td>" , $rs['wrongsum'],"%</td>
     </tr>";
+    
+    $rank=$rank+1;
 }
 ?>
 </table>
