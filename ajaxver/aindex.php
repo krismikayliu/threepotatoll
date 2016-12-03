@@ -118,12 +118,12 @@ $.ajax({
         <div class="navbar">
             <ul class="menu">
                 <!--<li><a href="editAcc.php"><br/>帳號管理(還沒寫好)</a></li>-->
-                <li><a href="teach.php"><img src="images/teach.png"><br/>Teach</a></li>
-                <li><a href="javascript:info()"><img src="images/personal_info.png"><br/>個人資料</a></li>
-                <li><a href="login.php"><img src="images/logout.png"><br/>Logout</a></li>
+                <li><a href="teach.php" class="hvr-grow"><img src="images/teach.png"><br/>學習</a></li>
+                <li><a href="javascript:info()" class="hvr-grow"><img src="images/personal_info.png"><br/>個人資料</a></li>
+                <li><a href="login.php" class="hvr-grow"><img src="images/logout.png"><br/>登出</a></li>
             </ul>
         </div>
-        <div id="name"><?php echo $_SESSION["nName"];?> 您好</div>
+        <div id="name">|&nbsp<?php echo $_SESSION["nName"];?>&nbsp|</div>
 	</div>
     <div id="sidenav"><!--sidenav-->
         <a href="javascript:exprank()"><div id="sidenavbt" class="hvr-grow">排行榜</div></a>

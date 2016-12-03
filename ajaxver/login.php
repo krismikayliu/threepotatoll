@@ -121,7 +121,7 @@ if(isset($_POST['password'])){
                     <input type="text" name="id">
                     <div id="loginbox">密碼<br/></div>
                     <input type="password" name="password"><br/>
-                <br/><input type="submit">
+                <br/><input type="submit" value="登入">
                 </form>
 			</div>
 		</div>

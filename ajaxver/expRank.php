@@ -13,7 +13,7 @@
 </head>
 <body>
 <div id="exp">
-<table id="exptable"><!--題目table-->
+<table id="exptable"><!--排行榜table-->
   <tr>
     <td height="40px" width="100px">名次</td>
     <td width="300px">user</td>

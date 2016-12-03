@@ -30,10 +30,10 @@ require_once("config.php");
         </div>
         <div class="navbar">
             <ul class="menu">
-                <li><a href="login.php"><img src="images/logout.png"><br/>Logout</a></li>
+                <li><a href="login.php"><img src="images/logout.png"><br/>登出</a></li>
             </ul>
         </div>
-        <div id="name"><?php echo $_SESSION["nName"];?> 您好</div>
+        <div id="name">|&nbsp<?php echo $_SESSION["nName"];?>&nbsp|</div>
 	</div>
 	<div class="container">
         <div class="row" id="choose">

@@ -10,7 +10,7 @@ require_once("config.php");
 <link rel="stylesheet" type="text/css" href="css3.css">
 <link rel="stylesheet" href="animations.css">
 <link rel="stylesheet" href="hover-min.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -72,7 +72,7 @@ $.ajax({
         </div>
         <div class="navbar">
             <ul class="menu">
-                <li><a href="aindex.php" class="hvr-grow"><img src="images/testhover.png"><br/>Test</a></li>
+                <li><a href="aindex.php" class="hvr-grow"><img src="images/test.png"><br/>測驗</a></li>
                 <!--<li><a href="javascript:calltea()" class="hvr-grow"><img src="images/teachhover.png"><br/>茶葉辨識</a></li>
                 <li><a href="javascript:callvideo()" class="hvr-grow"><img src="images/videohover.png"><br/>影片教材</a>
                     <ul class="menu2">
@@ -82,10 +82,12 @@ $.ajax({
                     </ul>
                 </li>
                 <li><a href="javascript:callinfo()" class="hvr-grow"><img src="images/teachhover.png"><br/>主任資訊</a></li>-->
-                <li><a href="login.php" class="hvr-grow"><img src="images/logouthover.png"><br/>Logout</a></li>
+                <li><a href="login.php" class="hvr-grow"><img src="images/logout.png"><br/>登出</a></li>
             </ul>
         </div>
-        <div id="name"><?php echo $_SESSION["nName"];?> 您好</div>
+        <div id="name">
+        <span style="color:#cedddd">|</span>&nbsp<?php echo $_SESSION["nName"];?>&nbsp<span style="color:#cedddd">|</span>
+        </div>
     </div>
     <div id="sidenav"><!--sidenav-->
         <a href="javascript:calltea()"><div id="sidenavbt" class="hvr-grow">茶葉辨識</div></a>
