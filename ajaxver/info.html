@@ -8,6 +8,8 @@ require_once("config.php");
 <title>info</title>
 
 <link rel="stylesheet" type="text/css" href="css3.css">
+<link rel="stylesheet" href="animations.css">
+<link rel="stylesheet" href="hover-min.css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="jquery.js" type="text/javascript"></script>
 <script type="text/javascript"></script>
@@ -22,61 +24,146 @@ require_once("config.php");
 </head>
 <body>
     <div class="infopart" id="infopart">
-    <div class="divh1">茶類加工基本流程</div>
-        <div class="steps">
-            <div class="step1 hvr-grow" id="stepbt"><a href="#infopart">萎凋</a></div>
-            <div class="step2 hvr-grow" id="stepbt"><a href="#part1">攪拌</a></div>
-            <div class="step3 hvr-grow" id="stepbt"><a href="#part2">炒菁</a></div>
-            <div class="step4 hvr-grow" id="stepbt"><a href="#part3">揉捻</a></div>
-            <div class="step5 hvr-grow" id="stepbt"><a href="#part4">乾燥</a></div>
-        </div>
-        <div class="stepcontent">
-            <div id="part1">
-            <h2>萎凋的意義與目的</h2>
+    <div class="divh1">茶葉小教室</div>
+        <div id="infoall">
+            <div id="steps">
+                <a href="#steps"><div class="step1 hvr-grow" id="stepbt">製茶流程</div></a>
+                <a href="#h2"><div class="step2 hvr-grow" id="stepbt">茶樹的一生</div></a>
+                <!--<a href="#part2"><div class="step3 hvr-grow" id="stepbt">炒菁</div></a>
+                <a href=""><div class="step4 hvr-grow" id="stepbt">揉捻</div></a>
+                <a href=""><div class="step5 hvr-grow" id="stepbt">乾燥</div></a>-->
             </div>
-            <div id="part2">
-            <h2>攪拌的意義及目的</h2>
+            <div class="stepcontent">
+            <div class="divh2">製茶流程</div>
+                <div id="part1">
+                    <div id="picfloat">
+                    <img style="width:225px;" src="images/pic1.png">
+                    <img src="images/pic4.png"><br/>
+                    <img src="images/pic2.jpg">
+                    <img src="images/pic3.png">
+                    </div>
+                <b style="font-size:18pt;">萎凋的意義與目的</b><br/>
+                ●剛採回的芽葉<br/>
+                ->水分含量高(75至80%)<br/>
+                ->細胞呈飽水狀態<br/>
+                ->鮮活膨硬<br/>
+                ●萎凋<br/>
+                ->物理萎凋<br/>
+                ->水份消散<br/>
+                ->硬度、重量、體積減少<br/>
+                ->具彈性，葉質柔軟<br/>
+                ->色澤暗綠<br/>
+                </div>
+                <div id="part2">
+                    <div id="picfloat">
+                    <img src="images/pic5.jpg">
+                    <img src="images/pic6.jpg"><br/>
+                    <img src="images/pic7.jpg">
+                    </div>
+                <b style="font-size:18pt;">攪拌的意義及目的</b><br/>
+                ●使葉緣細胞破損產生物理及化學變化，為部分發酵茶之重要製程。<br/>
+                ●隨攪拌次數增加逐漸加重力度及增長時間，嫩採動作宜輕，老採宜稍重。<br/>
+                ●適度攪拌可使葉梗中的液體擴散至葉面，即俗稱之「走水」(水分重新分佈)。<br/>
+                ●初時攪拌過重造成生葉容易受傷，茶菁產生「積水」，使外觀色澤暗黑，水色黃且滋味苦澀。<br/>
+                ●攪拌不足則香氣不揚，容易產生臭菁味。<br/>
+                ●萎凋及攪拌的過程<br/>
+                    ->三分紅、七分綠<br/>
+                    ->葉脈色淡、莖部走水消散、葉片柔軟，悅鼻芳香
+                </div>
+                <div id="part3">
+                <b style="font-size:18pt;">炒菁的意義與目的</b><br/>
+                ●高溫<br/>
+                ->急速破壞植物體中存在的酵素活性<br/>
+                ->停止發酵<br/>
+                ->停止其他生化反應<br/>
+                ●使品質趨於穩定<br/>
+                ->將發酵所產生的香、滋味及水色趨於穩定<br/>
+                ●減少水分含量<br/>
+                ●生葉組織軟化<br/>
+                ●去除菁味<br/>
+                ●利於揉捻作業<br/>
+                </div>
+                <div id="part4">
+                <b style="font-size:18pt;">揉捻的意義與目的</b><br/>
+                ●運用機械力量<br/>
+                ->使茶葉轉動相互摩擦<br/>
+                ->茶芽部分組織細胞破壞<br/>
+                ->汁液流出黏附在芽葉表面<br/>
+                ->乾燥凝固後，便於沖泡溶出<br/>
+                ●整形作用<br/>
+                ->使茶葉捲曲成條形<br/>
+                ->團揉成球型或半球形<br/>
+                ->外形美觀<br/>
+                ->減少成品體積，便於包裝，運輸及儲藏<br/>
+                ●揉捻不足時，茶葉形狀粗大，水色滋味淡薄。<br/>
+                </div>
+                <div id="part5">
+                <b style="font-size:18pt;">乾燥的意義與目的</b><br/>
+                ●溫熱風處理<br/>
+                ->破壞殘留茶葉中酵素<br/>
+                ->停止發酵作用及其他生化反應<br/>
+                ●品質固定在理想狀態<br/>
+                ●化學成分變化<br/>
+                ->改善茶葉香氣與滋味<br/>
+                ●含水量<br/>
+                ->下降到3至4%<br/>
+                ●外觀<br/>
+                ->葉身收縮成條索或半球形、球形緊結，便於長期貯藏<br/>
+                </div>
+                <div id="part6">
+                <div id="picfloat">
+                <b style="font-size:18pt;margin-left:100px;">茶葉發酵程度區分</b><br/>
+                <img style="width:470px;" src="images/pic8.png">
+                </div>
+                <b style="font-size:18pt;">茶葉加工基本流程</b><br/>
+                ●萎凋<br/>
+                ->物理萎凋：減少水分，增加滲透性，以利發酵<br/>
+                ->化學萎凋：蛋白質水解、胺基酸增加，可溶性糖增加，兒茶素氧化<br/>，咖啡因增加，酵素活性增加，不飽和脂肪酸氧化裂解，香氣形成<br/>
+                ●攪拌<br/>
+                ->破壞細胞壁，增加滲透性，促進發酵，水份再分佈<br/>
+                ●靜置<br/>
+                ->水分再分佈減少，緩慢發酵，香氣形成<br/>
+                ●殺菁<br/>
+                ->停止發酵，減少水分，去菁<br/>
+                ●揉捻<br/>
+                ->成形，易沖泡
+                ->紅茶類，發酵激烈開始<br/>
+                ●乾燥<br/>
+                ->固定，去菁<br/>
+                </div>
             </div>
-            <div id="part3">
-            <h2>炒菁的意義與目的</h2>
-            </div>
-            <div id="part4">
-            <h2>揉捻的意義與目的</h2>
-            </div>
-            <div id="part5">
-            <h2>乾燥的意義與目的</h2>
-            </div>
-        </div>
-        <div class="growall">
-            <div class="grow1" id="grow">
-                <div id="growpic"><img src="images/grow1.png"></div>
-                <div id="growdes"><p>種子期Seed Stage</p>
-                自開花至果實成熟，種子期約一年。<br/>
-                It takes 1 year for a seed to mature after blossom.</div>
-            </div>
-            <div class="grow2" id="grow">
-                <div id="growpic"><img src="images/grow2.png"></div>
-                <div id="growdes"><p>幼苗期Sprout Stage</p>
-                由種子萌發至真葉展開三至五片，一般約1至2年。<br/>
-                It takes 1 to 2 years for a sprout to grow to an open leaf plant with 3 to 5 leaves.</div>
-            </div>
-            <div class="grow3" id="grow">
-                <div id="growpic"><img src="images/grow3.png"></div>
-                <div id="growdes"><p>幼年期Young Plant Stage</p>
-                又稱「幼木期」，一般約3至5年。<br/>
-                Also called “Young Wood Age,” lasts about 3 to 5 years.</div>
-            </div>
-            <div class="grow4" id="grow">
-                <div id="growpic"><img src="images/grow4.png"></div>
-                <div id="growdes"><p>成年期Adulthood</p>
-                又稱「成木期」，一般約為20至30年。<br/>
-                Also called “Mature Plant Stage,”and lasts 20 to 30 years.</div>
-            </div>
-            <div class="grow5" id="grow">
-                <div id="growpic"><img src="images/grow5.png"></div>
-                <div id="growdes"><p>衰老期Old Age</p>
-                直到茶樹株死亡為止。一般經濟栽培年線約30至50年。<br/>
-                This stage lasts from adulthood to when the plant dies. It usually takes 30 to 50 years for a plant to die.</div>
+            <div class="growall" id="growall">
+            <div class="divh2" id="h2" style="margin-left:70px;">茶樹的一生</div>
+                <div class="grow1" id="grow">
+                    <div id="growpic"><img src="images/grow1.png"></div>
+                    <div id="growdes"><p>種子期Seed Stage</p>
+                    自開花至果實成熟，種子期約一年。<br/>
+                    It takes 1 year for a seed to mature after blossom.</div>
+                </div>
+                <div class="grow2" id="grow">
+                    <div id="growpic"><img src="images/grow2.png"></div>
+                    <div id="growdes"><p>幼苗期Sprout Stage</p>
+                    由種子萌發至真葉展開三至五片，一般約1至2年。<br/>
+                    It takes 1 to 2 years for a sprout to grow to an open leaf plant with 3 to 5 leaves.</div>
+                </div>
+                <div class="grow3" id="grow">
+                    <div id="growpic"><img src="images/grow3.png"></div>
+                    <div id="growdes"><p>幼年期Young Plant Stage</p>
+                    又稱「幼木期」，一般約3至5年。<br/>
+                    Also called “Young Wood Age,” lasts about 3 to 5 years.</div>
+                </div>
+                <div class="grow4" id="grow">
+                    <div id="growpic"><img src="images/grow4.png"></div>
+                    <div id="growdes"><p>成年期Adulthood</p>
+                    又稱「成木期」，一般約為20至30年。<br/>
+                    Also called “Mature Plant Stage,”and lasts 20 to 30 years.</div>
+                </div>
+                <div class="grow5" id="grow">
+                    <div id="growpic"><img src="images/grow5.png"></div>
+                    <div id="growdes"><p>衰老期Old Age</p>
+                    直到茶樹株死亡為止。一般經濟栽培年線約30至50年。<br/>
+                    This stage lasts from adulthood to when the plant dies. It usually takes 30 to 50 years for a plant to die.</div>
+                </div>
             </div>
         </div>
     </div>

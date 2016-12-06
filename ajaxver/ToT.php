@@ -33,7 +33,9 @@ require_once("config.php");
                 <li><a href="login.php"><img src="images/logout.png"><br/>登出</a></li>
             </ul>
         </div>
-        <div id="name">|&nbsp<?php echo $_SESSION["nName"];?>&nbsp|</div>
+        <div id="name">
+        <span style="color:#cedddd">|</span>&nbsp<?php echo $_SESSION["nName"];?>&nbsp<span style="color:#cedddd">|</span>
+        </div>
 	</div>
 	<div class="container">
         <div class="row" id="choose">

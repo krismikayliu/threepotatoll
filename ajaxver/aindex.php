@@ -123,7 +123,9 @@ $.ajax({
                 <li><a href="login.php" class="hvr-grow"><img src="images/logout.png"><br/>登出</a></li>
             </ul>
         </div>
-        <div id="name">|&nbsp<?php echo $_SESSION["nName"];?>&nbsp|</div>
+        <div id="name">
+        <span style="color:#cedddd">|</span>&nbsp<?php echo $_SESSION["nName"];?>&nbsp<span style="color:#cedddd">|</span>
+        </div>
 	</div>
     <div id="sidenav"><!--sidenav-->
         <a href="javascript:exprank()"><div id="sidenavbt" class="hvr-grow">排行榜</div></a>

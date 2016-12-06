@@ -90,9 +90,9 @@ $.ajax({
         </div>
     </div>
     <div id="sidenav"><!--sidenav-->
-        <a href="javascript:calltea()"><div id="sidenavbt" class="hvr-grow">茶葉辨識</div></a>
-        <a href="javascript:callvideo()"><div id="sidenavbt" class="hvr-grow">影片教材</div></a>
-        <a href="javascript:callinfo()"><div id="sidenavbt" class="hvr-grow">茶葉小教室</div></a>
+        <a href="javascript:calltea()"><div class="hvr-grow" id="sidenavbt">茶葉辨識</div></a>
+        <a href="javascript:callvideo()"><div class="hvr-grow" id="sidenavbt">影片教材</div></a>
+        <a href="javascript:callinfo()"><div class="hvr-grow" id="sidenavbt">茶葉小教室</div></a>
     </div>
 	<div class="container">
         <div id="content">
