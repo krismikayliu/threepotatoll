@@ -12,12 +12,13 @@
 <title>TEA Question</title>
 </head>
 <body>
+<div class="divh2">錯誤題目</div>
 <div id="wq">
 <table id="wqtable">
   <tr>
-    <td>題號</td>
-    <td>題目</td>
-    <td>正確答案</td>
+    <td width="100px" height="50px" background="images/rankbubble-01.png">題號</td>
+    <td width="300px" background="images/rankbubble-02.png">題目</td>
+    <td width="200px" background="images/rankbubble-03.png">正確答案</td>
   </tr>
 <?php
 
@@ -35,9 +36,9 @@ while (	$rs=mysqli_fetch_array($results)) {
     if(!in_array($qid,$exitar)){
         array_push($exitar,$qid);
         echo "<tr>
-        <td>NO." , $rs['qid'] ,"</td>
-        <td>" , $rs['question'] ,"</td>
-        <td>" , $rs['woption'],"</td>
+        <td height='50px' background='images/rankbubble-01.png'>NO." , $rs['qid'] ,"</td>
+        <td height='50px' background='images/rankbubble-02.png'>" , $rs['question'] ,"</td>
+        <td height='50px' background='images/rankbubble-03.png'>" , $rs['woption'],"</td>
         </tr>";
         $qid="";
     }
