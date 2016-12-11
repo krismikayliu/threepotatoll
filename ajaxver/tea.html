@@ -1,6 +1,11 @@
 ﻿<html>
 <head>
 <title>茶葉辨識</title>
+<link rel="stylesheet" type="text/css" href="css3.css">
+<link rel="stylesheet" href="animations.css">
+<link rel="stylesheet" href="hover-min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -9,11 +14,13 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
+<a class="hvr-grow" id="backtotop" href="#" title="Back to Top" style="color:#3F3F40"><i class="fa fa-chevron-circle-up fa-5x" aria-hidden="true"></i></a>
 </head>
 <body>
     <div class="teapart" id="teapart"><!--茶葉辨識的部分-->
     <div class="divh1">茶葉辨識</div>
-        <div class="row" id="tea1"><!--茶葉1-->
+    <div class="divh2" style="margin-left:9%;">條狀</div>
+        <div class="row" id="tea1"><!--條狀-->
             <div class="tea11" id="photo">
                 <img src="images/tea1.jpg" alt="紅茶">
             </div>
@@ -22,7 +29,7 @@
                 品質特色：<br/>外觀色澤宜烏黑油潤泛紫光，條型紅茶條鎖緊結勻齊，湯色艷紅，澄清明亮泛油光，以清純濃郁為佳；滋味醇和回甘、濃強鮮爽；葉底肥軟鮮活，紅勻明亮
             </div>
         </div>
-        <div class="row" id="tea2"><!--茶葉2-->
+        <div class="row" id="tea2"><!--條狀-->
             <div class="tea21" id="photo">
                 <img src="images/tea2.jpg" alt="綠茶(三峽碧螺春)">
             </div>
@@ -31,25 +38,7 @@
                 品質特色：<br/>因茶葉滿身披毫，銀綠隱翠，捲曲成螺而著稱，顏色濃綠、香氣凜冽、滋味甘醇、形狀優美
             </div>
         </div>
-        <div class="row" id="tea3"><!--茶葉3-->
-            <div class="tea31" id="photo">
-                <img src="images/tea3.jpg" alt="清香型烏龍茶">
-            </div>
-            <div class="tea32" id="description">
-                <h2>茶葉品種 - 清香型烏龍茶</h2>
-                品質特色：<br/>色澤翠綠鮮活，滋味甘醇滑軟厚重帶活性，香氣淡雅，水色蜜綠顯黃，耐沖泡
-            </div>
-        </div>
-        <div class="row" id="tea4"><!--茶葉4-->
-            <div class="tea41" id="photo">
-                <img src="images/tea4.jpg" alt="鐵觀音">
-            </div>
-            <div class="tea42" id="description">
-                <h2>茶葉品種 - 鐵觀音</h2>
-                品質特色：<br/>水色橙黃顯紅，味濃而醇厚，微澀中帶甘潤，並有純和的弱果酸味，以鐵觀音品種製造者為上品(俗稱正欉鐵觀音)
-            </div>
-        </div>
-        <div class="row" id="tea5"><!--茶葉5-->
+        <div class="row" id="tea5"><!--條狀-->
             <div class="tea51" id="photo">
                 <img src="images/tea5.jpg" alt="文山包種茶">
             </div>
@@ -58,7 +47,7 @@
                 品質特色：<br/>外觀條索彎曲，色澤鮮豔墨綠，水色蜜綠或蜜黃明亮，香氣清香幽雅似花香，滋味甘醇滑潤帶活性。重香氣，香氣越濃郁品質越高級
             </div>
         </div>
-        <div class="row" id="tea6"><!--茶葉6-->
+        <div class="row" id="tea6"><!--條狀-->
             <div class="tea61" id="photo">
                 <img src="images/tea6.jpg" alt="白毫烏龍茶">
             </div>
@@ -67,7 +56,26 @@
                 品質特色：<br/>外觀艷麗，白、綠、黃、紅、褐相間如朵花，高級者帶白毫，茶湯水色呈橙紅色，滋味濃醇甘潤帶天然的蜜香或熟果香
             </div>
         </div>
-        <div class="row" id="tea7"><!--茶葉7-->
+    <div class="divh2" style="margin-left:9%;">球狀</div>
+        <div class="row" id="tea3"><!--球狀-->
+            <div class="tea31" id="photo">
+                <img src="images/tea3.jpg" alt="清香型烏龍茶">
+            </div>
+            <div class="tea32" id="description">
+                <h2>茶葉品種 - 清香型烏龍茶</h2>
+                品質特色：<br/>色澤翠綠鮮活，滋味甘醇滑軟厚重帶活性，香氣淡雅，水色蜜綠顯黃，耐沖泡
+            </div>
+        </div>
+        <div class="row" id="tea4"><!--球狀-->
+            <div class="tea41" id="photo">
+                <img src="images/tea4.jpg" alt="鐵觀音">
+            </div>
+            <div class="tea42" id="description">
+                <h2>茶葉品種 - 鐵觀音</h2>
+                品質特色：<br/>水色橙黃顯紅，味濃而醇厚，微澀中帶甘潤，並有純和的弱果酸味，以鐵觀音品種製造者為上品(俗稱正欉鐵觀音)
+            </div>
+        </div>
+        <div class="row" id="tea7"><!--球狀-->
             <div class="tea71" id="photo">
                 <img src="images/tea7.jpg" alt="凍頂烏龍茶">
             </div>

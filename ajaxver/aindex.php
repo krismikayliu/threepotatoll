@@ -5,7 +5,7 @@ require_once("config.php");
 <!-- DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" -->
 <html xmlns="http://www.w3.org/1999/xhtml"  style="height: 100%;">
 <head>
-<title>test</title>
+<title>考試</title>
 
 <link rel="stylesheet" type="text/css" href="css3.css">
 <link rel="stylesheet" href="animations.css">
@@ -128,11 +128,11 @@ $.ajax({
         </div>
 	</div>
     <div id="sidenav"><!--sidenav-->
+        <a href="javascript:practice()"><div id="sidenavbt" class="hvr-grow">題目練習</div></a>
+        <div id='div002'></div>
         <a href="javascript:exprank()"><div id="sidenavbt" class="hvr-grow">排行榜</div></a>
         <a href="javascript:wrongques()"><div id="sidenavbt" class="hvr-grow">錯誤題目</div></a>
         <a href="javascript:wrongrank()"><div id="sidenavbt" class="hvr-grow">錯題榜</div></a>
-        <a href="javascript:practice()"><div id="sidenavbt" class="hvr-grow">題目練習</div></a>
-        <div id='div002'></div>
     </div>
     <div class="container"><!--全版面-->
         <div class="question">
@@ -150,7 +150,7 @@ $.ajax({
         </div>
         <hr>
 		<div class="bottom"><!--頁尾-->
-			國立暨南國際大學 茶理王專題小組<br/>
+			國立暨南國際大學 Schooling Fish專題小組<br/>
             Mail：threepotatoll@gmail.com<br/>
             地址：南投縣埔里鎮大學路1號
 		</div>

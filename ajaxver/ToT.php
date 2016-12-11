@@ -48,7 +48,7 @@ require_once("config.php");
         </div>
         <hr>
 		<div class="bottom"><!--頁尾-->
-			國立暨南國際大學 茶理王專題小組<br/>
+			國立暨南國際大學 Schooling Fish專題小組<br/>
             Mail：threepotatoll@gmail.com<br/>
             地址：南投縣埔里鎮大學路1號
 		</div>

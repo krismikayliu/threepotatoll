@@ -5,12 +5,14 @@ require_once("config.php");
 <!-- DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" -->
 <html xmlns="http://www.w3.org/1999/xhtml"  style="height: 100%;">
 <head>
-<title>teach</title>
+<title>學習</title>
 
 <link rel="stylesheet" type="text/css" href="css3.css">
 <link rel="stylesheet" href="animations.css">
 <link rel="stylesheet" href="hover-min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-1.12.1.min.js" integrity="sha256-I1nTg78tSrZev3kjvfdM5A5Ak/blglGzlaZANLPDl3I=" crossorigin="anonymous"></script>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -101,16 +103,16 @@ $.ajax({
         <div class="teachall">
             <!--<h2>這裡先放課堂總論</h2>-->
             <div class="box1" id="box">
-                <div id="zonlun"><img src="images/tea1.jpg"></div>
+                <div id="zonlun"><img src="images/tea3.jpg"></div>
                 <div id="zonlun2">
                 <b style="font-size:18pt">茶葉辨識</b><br/>
                 從專業教材內容中擷取茶葉圖片，再配合文字敘述，七種茶的特色都能簡易明瞭。
                 </div>
             </div>
             <div class="box2" id="box">
-                <div id="zonlun"><img src="images/tea2.jpg"></div>
+                <div id="zonlun"><img src="images/teachpic.jpg"></div>
                 <div id="zonlun2" style="font-size:12pt;line-height:20pt">
-                <b style="font-size:18pt">影片教學</b><br/>
+                <b style="font-size:18pt">影片教材</b><br/>
                 此部份分為三支影片：<br/>
                 1.炒菁機操作<br/>2.茶葉炒菁<br/>3.揉捻機操作<br/>
                 內容除了包含操作流程及講解外，更將操作流程放在下方資訊欄，方便重複觀看，
@@ -118,7 +120,7 @@ $.ajax({
                 </div>
             </div>
             <div class="box3" id="box">
-                <div id="zonlun"><img src="images/tea3.jpg"></div>
+                <div id="zonlun"><img src="images/pic8-2.png"></div>
                 <div id="zonlun2">
                 <b style="font-size:18pt">茶葉小教室</b><br/>
                 這部分的內容多半為課外補充之教材，雖不在製茶師考試的範圍內，
@@ -128,7 +130,7 @@ $.ajax({
         </div>
         <hr>
 		<div class="bottom"><!--頁尾-->
-			國立暨南國際大學 茶理王專題小組<br/>
+			國立暨南國際大學 Schooling Fish專題小組<br/>
             Mail：threepotatoll@gmail.com<br/>
             地址：南投縣埔里鎮大學路1號
 		</div>

@@ -12,12 +12,13 @@
 <title>TEA Question</title>
 </head>
 <body>
+<div class="divh2">錯題榜</div>
 <div id="wrong">
 <table id="wrongtable"><!--題目table-->
   <tr>
-    <td>名次</td>
-    <td>題號</td>
-    <td>錯誤率</td>
+    <td width="100px" height="50px" background="images/rankbubble-01.png">名次</td>
+    <td width="300px" background="images/rankbubble-02.png">題號</td>
+    <td width="200px" background="images/rankbubble-03.png">錯誤率</td>
   </tr>
 <?php
 
@@ -36,9 +37,9 @@ $rank=1;
 while (	$rs=mysqli_fetch_array($results)) {
 
 	echo "<tr>
-    <td>" , $rank ,"</td>
-	<td>NO." , $rs['qid'] ,"</td>
-	<td>" , $rs['wrongsum'],"%</td>
+    <td height='50px' background='images/rankbubble-01.png'>" , $rank ,"</td>
+	<td height='50px' background='images/rankbubble-02.png'>NO." , $rs['qid'] ,"</td>
+	<td height='50px' background='images/rankbubble-03.png'>" , $rs['wrongsum'],"%</td>
     </tr>";
     
     $rank=$rank+1;
