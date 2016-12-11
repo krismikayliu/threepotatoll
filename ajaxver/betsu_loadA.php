@@ -1,9 +1,9 @@
 <?php
 require_once("config.php");
     
-$id=(int)$_REQUEST['aid'];
+$oid=(int)$_REQUEST['aid'];
 
-$sql = "select * from options where oid=" . $id;
+$sql = "select * from options where oid=" . $oid;
 if($results=mysqli_query($conn,$sql)) {
     $rs=mysqli_fetch_array($results);
 ?>
@@ -31,30 +31,49 @@ $.ajax({
 </script>
 </head>
 <body>
-<tr><td>answer:</td>
-<td>
+
 <?php
     $id=$_SESSION['uID'];
     $cid=$_SESSION['cID'];
     $qid=$_SESSION['qID'];    
     if ($rs['answer']==1){
-        echo "yes";
+        $sql = "select * from `question`,`options` 
+        where question.qid=options.qid and `options`.qid='$qid' and answer=1";
+        $results=mysqli_query($conn,$sql);
+        if($results=mysqli_query($conn,$sql)) {
+            $rs=mysqli_fetch_array($results);
+            echo "答對了^^！<br/>NO.",$rs['qid'],$rs['question'],"<br/>正解為：",$rs['woption'];
+        }
+        else{
+            echo "sql wrong";
+        }
+        /*
         $sqlplus = "update `user` set correct=correct+1 where `id`='$id';";
         mysqli_query($conn,$sqlplus) or die ("MySQL query error plus");
         $sqltin = "insert into `log`(`id`,`qid`,`truefalse`) values ('$id','$qid','1');";
         mysqli_query($conn,$sqltin) or die ("MySQL query error tin");
+        */
     }
     else{
-        echo "no";
+        $sql = "select * from `question`,`options` 
+        where question.qid=options.qid and `options`.qid='$qid' and answer=1";
+        $results=mysqli_query($conn,$sql);
+        if($results=mysqli_query($conn,$sql)) {
+            $rs=mysqli_fetch_array($results);
+            echo "答錯了nono<br/>NO.",$rs['qid']," ",$rs['question'],"<br/>正解為：",$rs['woption'];
+        }
+        else{
+            echo "sql wrong";
+        }
+        /*
         $sqlfin = "insert into `log`(`id`,`qid`,`truefalse`) values ('$id','$qid','0');";
         mysqli_query($conn,$sqlfin) or die ("MySQL query error fin");
+        */
     }
-    echo "<input type='button' onclick='RandomQuestions(",$cid,")' value='下一題'>";   
-?>
-</td></tr>
-<?php
+    echo "<br/><input type='button' onclick='RandomQuestions(",$cid,")' value='下一題'>";   
 }
 ?>
+
 </body>
 </html>
 
