@@ -11,6 +11,12 @@ border-width:邊框的寬度;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }*/
+#backtotop{
+    display:scroll;
+    position:fixed;
+    bottom:15px;
+    right:25px;
+}
 .container{
     margin-top:100px;
 }
@@ -26,12 +32,12 @@ border-width:邊框的寬度;
     font-family:微軟正黑體;
     width:350px;
     margin-left:20px;
-    -webkit-box-shadow: #999 0px 2px 10px;/*陰影*/
-    -moz-box-shadow: #999 0px 2px 10px; /*陰影for Firefox*/
-    box-shadow: #999 0px 2px 10px; /*陰影for IE*/
-    -webkit-border-radius: 8px; /*圓角for Google Chrome、Safari*/
-    -moz-border-radius: 8px; /*圓角for Firefox*/
-    border-radius: 8px; /*圓角for IE*/
+    //-webkit-box-shadow: #999 0px 1px 10px;/*陰影*/
+    //-moz-box-shadow: #999 0px 1px 10px; /*陰影for Firefox*/
+    //box-shadow: #999 0px 1px 10px; /*陰影for IE*/
+    //-webkit-border-radius: 8px; /*圓角for Google Chrome、Safari*/
+    //-moz-border-radius: 8px; /*圓角for Firefox*/
+    //border-radius: 8px; /*圓角for IE*/
 }
 #loginbox{
     font-family:微軟正黑體;
@@ -53,7 +59,8 @@ border-width:邊框的寬度;
 .logo{
     float:left;
     margin-top:10px;
-    margin-left:100px;/* new */
+    //margin-left:100px;/* new */
+    margin-left:7%;/* new */
     //width:100px;
     //height:60px;
 }
@@ -159,17 +166,28 @@ border-width:邊框的寬度;
 }
 #catemenu a{
     color:white;
-    font-size:13pt;
+    font-size:11pt;
     text-decoration:none;
     font-family:微軟正黑體;
 }
 #sidenavbt3{
     background-color:#333;
-    padding:7px 3px;
+    padding:3px;
     margin-right:8px;
     text-align:center;
-    width:155px;
+    width:140px;
     height:45px;
+    //margin-left:22%;
+    float:left;
+}
+#sidenavbt32{
+    background-color:#333;
+    padding:10px 3px;
+    margin-right:8px;
+    text-align:center;
+    width:140px;
+    height:45px;
+    font-size:13pt;
     //margin-left:22%;
     float:left;
 }
@@ -210,6 +228,7 @@ border-width:邊框的寬度;
 .teachall{
     //background-color:yellowgreen;
     height:480px;
+    width:1200px;
     margin-top:30px;
 }
 .box1{
@@ -217,7 +236,8 @@ border-width:邊框的寬度;
     width:300px;
     height:480px;
     float:left;
-    margin-left:100px;
+    //margin-left:100px;
+    margin-left:8%;
     -webkit-box-shadow: #999 1px 3px 5px;/*陰影*/
     -moz-box-shadow: #999 1px 3px 5px; /*陰影for Firefox*/
     box-shadow: #999 1px 3px 5px; /*陰影for IE*/
@@ -227,7 +247,8 @@ border-width:邊框的寬度;
     width:300px;
     height:480px;
     float:left;
-    margin-left:40px;
+    //margin-left:40px;
+    margin-left:4%;
     -webkit-box-shadow: #999 1px 3px 5px;/*陰影*/
     -moz-box-shadow: #999 1px 3px 5px; /*陰影for Firefox*/
     box-shadow: #999 1px 3px 5px; /*陰影for IE*/
@@ -260,6 +281,7 @@ border-width:邊框的寬度;
     //background-color:red;
     width:450px;
     font-size:18pt;
+    color:#3F3F40;
     font-family:微軟正黑體;
     //margin-left:0px;
     float:left;
@@ -270,7 +292,8 @@ border-width:邊框的寬度;
     background-color:#cedddd;
     opacity:0.7;
     width:950px;
-    margin:0 auto;
+    //margin:0 auto;
+    margin-left:9%;
     margin-bottom:15px;
     -webkit-box-shadow:1px 2px 5px #ccc;/*div陰影*/
     -moz-box-shadow:1px 2px 5px #ccc; /*陰影for Firefox*/
@@ -285,13 +308,15 @@ border-width:邊框的寬度;
     margin-left:0px;
     margin-right:0px;
     width:950px;
-    margin:0 auto;
+    //width:85%;
+    margin-left:9%;
 }
 #left{
     //background-color:green;
     margin-left:0px;
     margin-right:0px;
-    width:800px;
+    //width:800px;
+    width:83%;
     float:left;
 }
 #video{
@@ -358,7 +383,7 @@ border-width:邊框的寬度;
 }
 .infopart{
     //background-color:purple;
-    height:3450px;
+    //height:3450px;
 }
 .divh2{
     background-color:skyblue;
@@ -374,8 +399,9 @@ border-width:邊框的寬度;
 .stepcontent{
     //background-color:pink;
     width:950px;
-    height:2785px;
-    margin:0 auto;
+    //height:2785px;
+    //margin:0 auto;
+    margin-left:9%;
     margin-bottom:30px;
 }
 #steps{
@@ -396,6 +422,7 @@ border-width:邊框的寬度;
     height:60px;
     float:left;
     margin-left:50px;
+    //margin-left:5%;
     text-align:center;
     padding:18px 0px;
     -webkit-border-radius: 8px; /*圓角for Google Chrome、Safari*/
@@ -408,6 +435,7 @@ border-width:邊框的寬度;
     height:430px;
     padding:5px 10px 5px 10px;
     line-height:30px;
+    color:#3F3F40;
     font-family:微軟正黑體;
     font-size:12pt;
     //border-color:#aaaaee;
@@ -418,9 +446,10 @@ border-width:邊框的寬度;
 #part6{
     //background-color:#cedddd;
     margin-bottom:30px;
-    height:420px;
+    height:440px;
     padding:5px 10px 5px 10px;
     line-height:26px;
+    color:#3F3F40;
     font-family:微軟正黑體;
     font-size:11pt;
     //border-color:#aaaaee;
@@ -434,15 +463,21 @@ border-width:邊框的寬度;
 #picfloat img{
     width:250px;
 }
+#growall{
+    //background-color:pink;
+    width:1200px;
+    height:500px;
+    //margin-left:70px;
+}
 .grow1{
-    background-color:#ffff99;
+    background-color:#ffffb3;
     width:200px;
     height:400px;
     float:left;
     margin-left:70px;
 }
 .grow2,.grow3,.grow4,.grow5{
-    background-color:#ffff99;
+    background-color:#ffffb3;
     width:200px;
     height:400px;
     float:left;
@@ -453,12 +488,14 @@ border-width:邊框的寬度;
     height:200px;
 }
 #growdes{
-    font-size:15px;
-    padding:10px;
+    font-size:11pt;
+    padding:6px;
+    line-height:18pt;
+    color:#3F3F40;
+    font-family:微軟正黑體;
 }
-#growdes p{
-    font-weight:bold;
-    font-size:15px;
+#growdes b{
+    font-size:12pt;
 }
 .question{
     //background-color:#999;
@@ -511,11 +548,13 @@ border-width:邊框的寬度;
     height:100px;
     width:550px;
     //background-color:yellow;
+    color:ivory;
+    font-size:14pt;
     font-family:微軟正黑體;
 }
 #qtable td {
     //border: 1px solid black;
-    padding-left:8px;
+    padding-left:7px;
     //background-color:#999;
 }
 #opt{
@@ -529,6 +568,7 @@ border-width:邊框的寬度;
     //height:60px;
     width:550px;
     //background-color:pink;
+    font-size:12pt;
     font-family:微軟正黑體;
 }
 #opttable tr {
@@ -543,48 +583,57 @@ border-width:邊框的寬度;
     padding-left:20px;
     //background-color:#999;
 }
+#opttable td.tdfont{color:ivory;}
 #wrong{
     //background-color:skyblue;
-    height:600px;
-    width:800px;
+    height:400px;
+    width:650px;
+    overflow:auto;
 }
 #wrongtable{
-    border:3px solid black;
+    //border:3px solid black;
+    //background-color:pink;
     //height:60px;
     width:600px;
     font-family:微軟正黑體;
 }
 #wrongtable td {
-    border: 1px solid black;
+    //border: 1px solid black;
     padding-left:20px;
     //background-color:#999;
 }
 #exp{
     //background-color:pink;
-    height:600px;
-    width:800px;
+    height:400px;
+    width:650px;
+    overflow:auto;
 }
 #exptable{
-    border:3px solid black;
+    //border:3px solid black;
     //height:60px;
     width:600px;
+    font-size:12pt;
+    color:ivory;
     font-family:微軟正黑體;
 }
 #exptable td{
-    border: 1px solid black;
-    padding-left:20px;
+    //border: 1px solid black;
+    padding-left:30px;
     //background-color:#999;
 }
 #wq{
     //background-color:yellow;
-    height:600px;
-    width:800px;
+    height:400px;
+    width:650px;
+    overflow:auto;
 }
 #wqtable{
     border:3px solid black;
     //height:60px;
     width:600px;
     //background-color:pink;
+    font-size:12pt;
+    color:ivory;
     font-family:微軟正黑體;
 }
 #wqtable td{

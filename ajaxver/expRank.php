@@ -12,12 +12,13 @@
 <title>TEA Question</title>
 </head>
 <body>
+<div class="divh2">排行榜</div>
 <div id="exp">
 <table id="exptable"><!--排行榜table-->
   <tr>
-    <td height="40px" width="100px">名次</td>
-    <td width="300px">user</td>
-    <td>經驗值</td>
+    <td width="100px" height="50px" background="images/rankbubble-01.png">名次</td>
+    <td width="300px" background="images/rankbubble-02.png">暱稱</td>
+    <td width="200px" background="images/rankbubble-03.png">經驗值</td>
   </tr>
 <?php
 
@@ -28,9 +29,9 @@ $rank=1;
 while (	$rs=mysqli_fetch_array($results)) {
 
 	echo "<tr>
-    <td height='30px'>" , $rank ,"</td>
-	<td>" , $rs['id'] ,"</td>
-	<td>" , $rs['exp'],"</td>
+    <td height='50px' background='images/rankbubble-01.png'>" , $rank ,"</td>
+	<td background='images/rankbubble-02.png'>" , $rs['nickname'] ,"</td>
+	<td background='images/rankbubble-03.png'>" , $rs['exp'],"</td>
     </tr>";
     $rank=$rank+1;
 }

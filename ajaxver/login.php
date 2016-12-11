@@ -117,7 +117,7 @@ if(isset($_POST['password'])){
             <div class="col-md-4" id="login"><!--登入-->
             <h2>登入</h2><hr />
                 <form method="post" action="login.php">
-                    <div id="loginbox">使用者名稱<br/></div>
+                    <div id="loginbox">帳號<br/></div>
                     <input type="text" name="id">
                     <div id="loginbox">密碼<br/></div>
                     <input type="password" name="password"><br/>
@@ -127,7 +127,7 @@ if(isset($_POST['password'])){
 		</div>
         <hr>
 		<div class="bottom"><!--頁尾-->
-			國立暨南國際大學 茶理王專題小組<br/>
+			國立暨南國際大學 Schooling Fish專題小組<br/>
             Mail：threepotatoll@gmail.com<br/>
             地址：南投縣埔里鎮大學路1號
 		</div>

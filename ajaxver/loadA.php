@@ -30,29 +30,29 @@ $.ajax({
 </script>
 </head>
 <body>
-<tr><td>answer:</td>
-<td>
+<tr><!--<td><font size="14pt">answer：</font></td>-->
+<td><font size="14pt">
 <?php
     $id=$_SESSION['uID'];
     $qid=$_SESSION['qID'];    
     if ($rs['answer']==1){
-        echo "yes";
+        echo "答對了！";
         $sqlplus = "update `user` set correct=correct+1 where `id`='$id';";
         mysqli_query($conn,$sqlplus) or die ("MySQL query error plus");
         $sqltin = "insert into `log`(`id`,`qid`,`truefalse`) values ('$id','$qid','1');";
         mysqli_query($conn,$sqltin) or die ("MySQL query error tin");
       }
     else{
-        echo "no";
+        echo "答錯了！";
         $sqlfin = "insert into `log`(`id`,`qid`,`truefalse`) values ('$id','$qid','0');";
         mysqli_query($conn,$sqlfin) or die ("MySQL query error fin");
     }        
 ?>
-</td></tr>
+</font></td></tr>
 <?php
 }
 ?>
-<input type="button" onclick="RandomQuestions()" value="下一題">
+<br/><br/><input type="button" onclick="RandomQuestions()" value="下一題">
 </body>
 </html>
 
