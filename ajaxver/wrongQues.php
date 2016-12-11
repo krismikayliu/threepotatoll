@@ -26,13 +26,18 @@ $id=$_SESSION['uID'];
 $exitar = array();
 
 $sql = "select * from `log`,`question`,`options` 
-where question.qid=log.qid and question.qid=options.qid and id='$id' and answer=1";
+where question.qid=log.qid and question.qid=options.qid and id='$id' and answer=1 order by logid desc limit 30";
 $results=mysqli_query($conn,$sql);
 
 while (	$rs=mysqli_fetch_array($results)) {
 
     $qid=$rs['qid'];
-
+    echo "<tr>
+        <td height='50px' background='images/rankbubble-01.png'>NO." , $rs['qid'] ,"</td>
+        <td height='50px' background='images/rankbubble-02.png'>" , $rs['question'] ,"</td>
+        <td height='50px' background='images/rankbubble-03.png'>" , $rs['woption'],"</td>
+        </tr>";
+    /*
     if(!in_array($qid,$exitar)){
         array_push($exitar,$qid);
         echo "<tr>
@@ -42,6 +47,7 @@ while (	$rs=mysqli_fetch_array($results)) {
         </tr>";
         $qid="";
     }
+    */
 }
 ?>
 </table>

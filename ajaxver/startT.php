@@ -10,7 +10,7 @@ require_once("config.php");
 function RandomQuestions() {
 	DIV='div001';
 $.ajax({
-		url: 'startT.php',
+		url: 'newqna.php',
 		dataType: 'html',
 		type: 'POST',
 		error: function(xhr) {
@@ -21,27 +21,17 @@ $.ajax({
 			}
 	});
 }
-function BetsuQuestions() {
-	DIV='div001';
-$.ajax({
-		url: 'chooseCate.php',
-		dataType: 'html',
-		type: 'POST',
-		error: function(xhr) {
-			$('#'+DIV).html(xhr);
-			},
-		success: function(response) {
-			$('#'+DIV).html(response); //set the html content of the object msg
-			}
-	});
-}
+
 </script>
 <title>TEA Question</title>
 </head>
-
 <body>
-<a href="javascript:BetsuQuestions()"><div id="sidenavbt2" class="hvr-grow">分類練習</div></a>
-<a href="javascript:RandomQuestions()"><div id="sidenavbt2" class="hvr-grow">隨機練習</div></a>
+<?php
+$start=false;
+$_SESSION['start']=$start;
+?>
+題目共有五題
+<input type="button" onclick="RandomQuestions()" value="開始作答">
 <!--<div class="practice">
     <ul class="pmenu">
         <li><a href="javascript:BetsuQuestions()"><img src="images/test.png"><br/>分類練習</a></li>
