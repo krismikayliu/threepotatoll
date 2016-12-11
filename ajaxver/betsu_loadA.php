@@ -37,12 +37,11 @@ $.ajax({
     $cid=$_SESSION['cID'];
     $qid=$_SESSION['qID'];    
     if ($rs['answer']==1){
-        $sql = "select * from `question`,`options` 
+        $sqls = "select * from `question`,`options` 
         where question.qid=options.qid and `options`.qid='$qid' and answer=1";
-        $results=mysqli_query($conn,$sql);
-        if($results=mysqli_query($conn,$sql)) {
-            $rs=mysqli_fetch_array($results);
-            echo "答對了^^！<br/>NO.",$rs['qid'],$rs['question'],"<br/>正解為：",$rs['woption'];
+        if($result=mysqli_query($conn,$sqls)) {
+            $rss=mysqli_fetch_array($result);
+            echo "答對了^^！<br/>NO.",$rss['qid'],$rss['question'],"<br/>正解為：",$rss['woption'];
         }
         else{
             echo "sql wrong";
@@ -55,12 +54,23 @@ $.ajax({
         */
     }
     else{
-        $sql = "select * from `question`,`options` 
+        echo "答錯了nono<br/>";
+        $sqls = "select * from `question`,`options` 
         where question.qid=options.qid and `options`.qid='$qid' and answer=1";
-        $results=mysqli_query($conn,$sql);
-        if($results=mysqli_query($conn,$sql)) {
-            $rs=mysqli_fetch_array($results);
-            echo "答錯了nono<br/>NO.",$rs['qid']," ",$rs['question'],"<br/>正解為：",$rs['woption'];
+        if($result=mysqli_query($conn,$sqls)) {
+            $rss=mysqli_fetch_array($result);
+            echo "NO.",$rss['qid']," ",$rss['question'];
+        }
+        $sqlss = "select * from options where oid=" . $oid;
+        if($resultss=mysqli_query($conn,$sqlss)) {
+            $rsss=mysqli_fetch_array($resultss);
+            echo "<br/>你答的選項為：",$rsss['woption'];
+        }
+        $sqls = "select * from `question`,`options` 
+        where question.qid=options.qid and `options`.qid='$qid' and answer=1";
+        if($result=mysqli_query($conn,$sqls)) {
+            $rss=mysqli_fetch_array($result);
+            echo "<br/>正解為：",$rss['woption'];
         }
         else{
             echo "sql wrong";
