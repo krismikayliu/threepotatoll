@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主機: 127.0.0.1
--- 產生時間： 2016 �?11 ??07 ??12:45
+-- 產生時間： 2016 �?12 ??11 ??22:20
 -- 伺服器版本: 5.6.21
 -- PHP 版本： 5.6.3
 
@@ -52,52 +52,144 @@ CREATE TABLE IF NOT EXISTS `log` (
 `logid` int(11) NOT NULL,
   `id` varchar(20) COLLATE utf8_unicode_520_ci NOT NULL,
   `qid` int(11) NOT NULL,
-  `truefalse` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_520_ci;
+  `truefalse` int(11) NOT NULL,
+  `tid` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=130 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_520_ci;
 
 --
 -- 資料表的匯出資料 `log`
 --
 
-INSERT INTO `log` (`logid`, `id`, `qid`, `truefalse`) VALUES
-(1, '0', 660, 0),
-(2, 'bye', 235, 0),
-(3, 'bye', 424, 0),
-(4, 'bye', 458, 0),
-(5, 'bye', 413, 1),
-(6, 'bye', 363, 0),
-(7, 'bye', 0, 1),
-(8, 'bye', 50, 0),
-(9, 'bye', 36, 0),
-(10, 'bye', 53, 0),
-(11, 'bye', 55, 0),
-(12, 'bye', 11, 0),
-(13, 'bye', 189, 0),
-(14, 'bye', 196, 0),
-(15, 'egg', 235, 0),
-(16, 'egg', 661, 1),
-(17, 'egg', 661, 0),
-(18, 'egg', 661, 0),
-(19, 'egg', 262, 1),
-(20, 'egg', 262, 0),
-(21, 'egg', 358, 0),
-(22, 'egg', 197, 1),
-(23, 'egg', 677, 0),
-(24, 'egg', 677, 0),
-(25, 'egg', 677, 0),
-(26, 'egg', 677, 0),
-(27, 'egg', 677, 0),
-(28, 'egg', 677, 0),
-(29, 'egg', 677, 0),
-(30, 'egg', 677, 1),
-(31, 'egg', 677, 0),
-(32, 'egg', 677, 1),
-(33, 'egg', 677, 0),
-(34, 'egg', 677, 0),
-(35, 'egg', 677, 0),
-(36, 'egg', 677, 0),
-(37, 'egg', 677, 0),
-(38, 'egg', 677, 1);
+INSERT INTO `log` (`logid`, `id`, `qid`, `truefalse`, `tid`) VALUES
+(1, '0', 660, 0, 0),
+(2, 'bye', 235, 0, 0),
+(3, 'bye', 424, 0, 0),
+(4, 'bye', 458, 0, 0),
+(5, 'bye', 413, 1, 0),
+(6, 'bye', 363, 0, 0),
+(7, 'bye', 0, 1, 0),
+(8, 'bye', 50, 0, 0),
+(9, 'bye', 36, 0, 0),
+(10, 'bye', 53, 0, 0),
+(11, 'bye', 55, 0, 0),
+(12, 'bye', 11, 1, 0),
+(13, 'bye', 189, 0, 0),
+(14, 'bye', 196, 1, 0),
+(15, 'egg', 235, 0, 0),
+(16, 'egg', 661, 1, 0),
+(17, 'egg', 661, 0, 0),
+(18, 'egg', 661, 0, 0),
+(19, 'egg', 262, 1, 0),
+(20, 'egg', 262, 0, 0),
+(21, 'egg', 358, 1, 0),
+(22, 'egg', 197, 1, 0),
+(23, 'egg', 677, 0, 0),
+(24, 'egg', 677, 0, 0),
+(25, 'egg', 677, 0, 0),
+(26, 'egg', 677, 0, 0),
+(27, 'egg', 677, 0, 0),
+(28, 'egg', 677, 0, 0),
+(29, 'egg', 677, 0, 0),
+(30, 'egg', 677, 1, 0),
+(31, 'egg', 677, 0, 0),
+(32, 'egg', 677, 1, 0),
+(33, 'egg', 677, 0, 0),
+(34, 'egg', 677, 0, 0),
+(35, 'egg', 677, 0, 0),
+(36, 'egg', 677, 0, 0),
+(37, 'egg', 677, 0, 0),
+(38, 'egg', 677, 1, 0),
+(39, 'aaa', 397, 1, 0),
+(40, 'aaa', 257, 0, 0),
+(41, 'aaa', 670, 1, 0),
+(42, 'egg', 670, 1, 0),
+(43, 'egg', 257, 0, 0),
+(44, 'egg', 322, 0, 0),
+(45, 'egg', 195, 1, 0),
+(46, 'egg', 139, 1, 0),
+(47, 'egg', 322, 0, 0),
+(48, 'egg', 645, 1, 0),
+(49, 'egg', 617, 0, 0),
+(50, 'egg', 292, 0, 0),
+(51, 'egg', 81, 1, 0),
+(52, 'egg', 287, 0, 0),
+(53, 'egg', 2, 0, 0),
+(54, 'egg', 353, 1, 0),
+(55, 'yuchian', 316, 1, 0),
+(56, 'yuchian', 105, 1, 0),
+(57, '105012', 129, 1, 0),
+(58, '105012', 695, 1, 0),
+(59, '105012', 39, 0, 0),
+(60, '105012', 76, 0, 0),
+(61, '105012', 299, 1, 0),
+(62, 'egg', 613, 0, 0),
+(63, 'egg', 287, 0, 0),
+(64, 'egg', 22, 1, 0),
+(65, 'egg', 43, 1, 0),
+(66, 'egg', 504, 0, 0),
+(67, 'egg', 387, 0, 0),
+(68, 'egg', 70, 1, 0),
+(69, 'egg', 7, 0, 0),
+(70, 'egg', 155, 0, 0),
+(71, 'egg', 274, 0, 0),
+(72, 'egg', 299, 0, 0),
+(73, 'egg', 330, 0, 0),
+(74, 'egg', 90, 1, 0),
+(75, 'egg', 574, 0, 0),
+(76, 'egg', 692, 1, 0),
+(77, 'egg', 464, 0, 0),
+(78, 'egg', 438, 0, 0),
+(79, 'egg', 642, 0, 0),
+(80, 'egg', 639, 1, 0),
+(81, 'egg', 71, 0, 0),
+(82, 'egg', 326, 1, 0),
+(83, 'egg', 451, 1, 0),
+(84, 'egg', 687, 0, 0),
+(85, 'egg', 463, 0, 0),
+(86, 'egg', 63, 0, 0),
+(87, 'egg', 188, 0, 0),
+(88, 'egg', 544, 0, 0),
+(89, 'egg', 563, 1, 0),
+(90, 'egg', 102, 0, 0),
+(91, 'egg', 688, 0, 0),
+(92, 'egg', 39, 0, 0),
+(93, 'egg', 507, 0, 0),
+(94, 'egg', 438, 1, 0),
+(95, 'egg', 7, 0, 0),
+(96, 'egg', 38, 0, 0),
+(97, 'egg', 70, 1, 4),
+(98, 'egg', 7, 0, 4),
+(99, 'egg', 155, 1, 4),
+(100, 'egg', 106, 1, 5),
+(101, 'egg', 331, 1, 5),
+(102, 'egg', 642, 0, 5),
+(103, 'egg', 639, 1, 5),
+(104, 'egg', 71, 0, 5),
+(105, 'egg', 465, 1, 6),
+(106, 'egg', 413, 1, 6),
+(107, 'egg', 641, 1, 6),
+(108, 'egg', 442, 1, 6),
+(109, 'egg', 183, 1, 6),
+(110, 'egg', 658, 1, 7),
+(111, 'egg', 102, 0, 7),
+(112, 'egg', 559, 0, 7),
+(113, 'egg', 689, 0, 7),
+(114, 'egg', 14, 0, 7),
+(115, 'egg', 465, 1, 8),
+(116, 'egg', 413, 0, 8),
+(117, 'egg', 641, 0, 8),
+(118, 'egg', 442, 0, 8),
+(119, 'egg', 183, 1, 8),
+(120, 'egg', 658, 1, 9),
+(121, 'egg', 102, 0, 9),
+(122, 'egg', 559, 1, 9),
+(123, 'egg', 689, 0, 9),
+(124, 'egg', 14, 0, 9),
+(125, 'egg', 691, 0, 15),
+(126, 'egg', 292, 0, 15),
+(127, 'egg', 73, 0, 15),
+(128, 'egg', 33, 0, 15),
+(129, 'egg', 586, 0, 15);
 
 -- --------------------------------------------------------
 
@@ -3635,9 +3727,31 @@ INSERT INTO `question` (`qid`, `question`, `cid`) VALUES
 
 CREATE TABLE IF NOT EXISTS `test` (
 `tid` int(11) NOT NULL,
-  `uid` int(11) NOT NULL,
+  `id` varchar(16) COLLATE utf8_unicode_520_ci NOT NULL,
+  `score` int(11) NOT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_520_ci;
+
+--
+-- 資料表的匯出資料 `test`
+--
+
+INSERT INTO `test` (`tid`, `id`, `score`, `time`) VALUES
+(1, '', 0, '2016-12-11 20:09:57'),
+(2, 'egg', 200, '2016-12-11 20:35:49'),
+(3, 'egg', 200, '2016-12-11 20:35:49'),
+(4, 'egg', 200, '2016-12-11 20:35:49'),
+(5, 'egg', 160, '2016-12-11 20:35:49'),
+(6, 'egg', 100, '2016-12-11 20:35:49'),
+(7, 'egg', 20, '2016-12-11 20:36:52'),
+(8, 'egg', 40, '2016-12-11 20:43:21'),
+(9, 'egg', 40, '2016-12-11 20:43:52'),
+(10, 'egg', 0, '2016-12-11 20:47:24'),
+(11, 'egg', 0, '2016-12-11 20:47:34'),
+(12, 'egg', 0, '2016-12-11 20:47:38'),
+(13, 'egg', 0, '2016-12-11 20:48:09'),
+(14, 'egg', 0, '2016-12-11 20:48:12'),
+(15, 'egg', 0, '2016-12-11 20:50:53');
 
 -- --------------------------------------------------------
 
@@ -3650,17 +3764,21 @@ CREATE TABLE IF NOT EXISTS `user` (
   `id` varchar(16) COLLATE utf8_unicode_520_ci NOT NULL,
   `password` varchar(20) COLLATE utf8_unicode_520_ci NOT NULL,
   `nickname` varchar(20) COLLATE utf8_unicode_520_ci NOT NULL,
-  `correct` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_520_ci;
+  `correct` int(11) NOT NULL,
+  `exp` int(11) NOT NULL,
+  `priority` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_520_ci;
 
 --
 -- 資料表的匯出資料 `user`
 --
 
-INSERT INTO `user` (`uid`, `id`, `password`, `nickname`, `correct`) VALUES
-(1, 'aaa', 'aaa', 'aaa', 3),
-(2, 'bye', 'bye', 'bye', 203),
-(3, 'egg', 'egg', 'egg', 7);
+INSERT INTO `user` (`uid`, `id`, `password`, `nickname`, `correct`, `exp`, `priority`) VALUES
+(1, 'aaa', 'aaa', 'aaa', 5, 100, 1),
+(2, 'bye', 'bye', 'byebye', 203, 30, 0),
+(3, 'egg', 'egg', 'egg', 32, 870, 0),
+(6, 'yuchian', '123', 'yuchian', 2, 50, 0),
+(7, '105012', '321', 'xaun', 3, 85, 0);
 
 --
 -- 已匯出資料表的索引
@@ -3715,7 +3833,7 @@ MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 -- 使用資料表 AUTO_INCREMENT `log`
 --
 ALTER TABLE `log`
-MODIFY `logid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
+MODIFY `logid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=130;
 --
 -- 使用資料表 AUTO_INCREMENT `options`
 --
@@ -3730,12 +3848,12 @@ MODIFY `qid` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=699;
 -- 使用資料表 AUTO_INCREMENT `test`
 --
 ALTER TABLE `test`
-MODIFY `tid` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `tid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
 --
 -- 使用資料表 AUTO_INCREMENT `user`
 --
 ALTER TABLE `user`
-MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
