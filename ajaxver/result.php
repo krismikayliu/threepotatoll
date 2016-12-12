@@ -30,10 +30,10 @@ $.ajax({
     $tid=$_SESSION['tid'];
     
     
-    $sql = "select * from test where id='$id' and tid='$tid';";
+    $sql = "select * from test,user where test.id=user.id and test.id='$id' and tid='$tid';";
     $results=mysqli_query($conn,$sql);
     if($rs=mysqli_fetch_array($results)){    
-        echo "名字：",$rs['id'],"<br/>分數：",$rs['score'];
+        echo "名字：",$rs['nickname'],"<br/>分數：",$rs['score'];
     }
 
     $sql = "select * from `log` where id='$id' and truefalse='0' and tid='$tid';";

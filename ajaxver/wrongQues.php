@@ -26,7 +26,8 @@ $id=$_SESSION['uID'];
 $exitar = array();
 
 $sql = "select * from `log`,`question`,`options` 
-where question.qid=log.qid and question.qid=options.qid and id='$id' and answer=1 order by logid desc limit 30";
+where question.qid=log.qid and question.qid=options.qid and id='$id' and answer=1 and truefalse=0
+order by logid desc limit 30";
 $results=mysqli_query($conn,$sql);
 
 while (	$rs=mysqli_fetch_array($results)) {

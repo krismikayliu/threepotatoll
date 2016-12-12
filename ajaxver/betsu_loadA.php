@@ -10,7 +10,8 @@ if($results=mysqli_query($conn,$sql)) {
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<?php echo'<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">'?>
+<link rel="stylesheet" href="animations.css">
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -32,7 +33,7 @@ $.ajax({
 </script>
 </head>
 <body>
-
+<font size="4pt" face="微軟正黑體">
 <?php
     $id=$_SESSION['uID'];
     $cid=$_SESSION['cID'];
@@ -42,7 +43,8 @@ $.ajax({
         where question.qid=options.qid and `options`.qid='$qid' and answer=1";
         if($result=mysqli_query($conn,$sqls)) {
             $rss=mysqli_fetch_array($result);
-            echo "<i class='fa fa-circle-o' aria-hidden='true'></i> 答對了^^！<br/>NO.",$rss['qid'],$rss['question'],"<br/>正解為：",$rss['woption'];
+            echo "<img class='slideExpandUp' src='images/goodjob.png' width='150px'><br/>";
+            echo "答對了！<br/>NO.",$rss['qid'],$rss['question'],"<br/>正解為：",$rss['woption'];
         }
         else{
             echo "sql wrong";
@@ -55,7 +57,8 @@ $.ajax({
         */
     }
     else{
-        echo "<i class='fa fa-times' aria-hidden='true'></i>答錯了nono<br/>";
+        echo "<img class='slideExpandUp' src='images/ohno.png' width='150px'><br/>";
+        echo "答錯了！<br/>";
         $sqls = "select * from `question`,`options` 
         where question.qid=options.qid and `options`.qid='$qid' and answer=1";
         if($result=mysqli_query($conn,$sqls)) {
@@ -81,10 +84,10 @@ $.ajax({
         mysqli_query($conn,$sqlfin) or die ("MySQL query error fin");
         */
     }
-    echo "<br/><input type='button' onclick='RandomQuestions(",$cid,")' value='下一題'>";   
+    echo "<br/><br/><input type='button' onclick='RandomQuestions(",$cid,")' value='下一題'>";   
 }
 ?>
-
+</font>
 </body>
 </html>
 

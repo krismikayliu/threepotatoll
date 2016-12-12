@@ -11,6 +11,8 @@ if($results=mysqli_query($conn,$sql)) {
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<link rel="stylesheet" href="animations.css">
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -46,7 +48,7 @@ $.ajax({
 </head>
 <body>
 <tr>
-<td><font size="12pt">
+<td><font size="6pt" face="微軟正黑體">
 <?php
     $id=$_SESSION['uID'];
     $qid=$_SESSION['qID']; 
@@ -54,6 +56,7 @@ $.ajax({
     $tid=$_SESSION['tid'];
     
     if ($rs['answer']==1){
+        echo "<img class='slideExpandUp' src='images/goodjob.png' width='150px'><br/>";
         echo "答對了！獲得經驗值+20";
         $sqlplus = "update `user` set correct=correct+1 where `id`='$id';";
         mysqli_query($conn,$sqlplus) or die ("MySQL query error plus");
@@ -66,6 +69,7 @@ $.ajax({
         
       }
     else{
+        echo "<img class='slideExpandUp' src='images/ohno.png' width='150px'><br/>";
         echo "答錯了！獲得經驗值+5";
         $sqlexp = "update `user` set exp=exp+5 where `id`='$id';";
         mysqli_query($conn,$sqlexp) or die ("MySQL query error exp");
@@ -81,7 +85,7 @@ $.ajax({
 <?php
 }
 if($i<5){
-    echo "<input type='button' onclick='RandomQuestions()' value='下一題'>";
+    echo "<br/><input type='button' onclick='RandomQuestions()' value='下一題'>";
 }
 else{
     echo "<input type='button' onclick='TestResult()' value='結束作答'>";

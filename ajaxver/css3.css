@@ -70,10 +70,11 @@ border-width:邊框的寬度;
 #name{
     //background-color:rgba(0, 169, 157,0.3);
     float:right;
-    font-size:18pt;
+    font-size:17pt;
     padding:5px;
-    margin-top:15px;
+    margin-top:20px;
     margin-right:-25px;
+    font-family:微軟正黑體;
 } 
 #name2{
     font-size:16pt;

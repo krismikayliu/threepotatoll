@@ -42,6 +42,7 @@ $_SESSION['qarr']=array();
 $i=0;
 $_SESSION['i']=$i;
 $exitques = array();
+//$exitques = array("71","567","644","353","50");
 
 $sqltin = "insert into `test`(`id`) values ('$id');";
 mysqli_query($conn,$sqltin) or die ("MySQL query error tin");
@@ -59,6 +60,7 @@ if($sum=mysqli_fetch_array($query)){
 else{
     $total=0;
 }
+
 while(count($exitques)<=5){
     $random=rand(1,$total);
     $sql = "select * from `question` where qid=$random";
@@ -74,6 +76,7 @@ while(count($exitques)<=5){
 
     }
 }
+
 $_SESSION['qarr']=$exitques;
 }
 //print_r($exitques);
