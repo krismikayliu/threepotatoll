@@ -30,7 +30,8 @@ if($sum=mysqli_fetch_array($query)){
 else{
     $total=0;
 }
-$sql = "select `qid`,ROUND(count(qid)/$total*100,1) AS wrongsum from `log` where `truefalse`='0' group by `qid` order by wrongsum desc";
+$sql = "select `qid`,ROUND(count(qid)/$total*100,1) AS wrongsum from `log` 
+where `truefalse`='0' group by `qid` order by wrongsum desc limit 30";
 $results=mysqli_query($conn,$sql);
 $rank=1;
 

@@ -26,6 +26,7 @@ if(isset($_POST['password'])){
 			if ($row=mysqli_fetch_array($result)) {
 				$_SESSION['uID'] = $row['id'];
 				$_SESSION['nName'] = $row['nickname'];
+                $_SESSION['id'] = $row['uid'];
 				header("Location:ToT.php");
 				echo "<a href='ToT.php'>go</a>";
 				exit(0);

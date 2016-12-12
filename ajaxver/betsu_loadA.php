@@ -1,9 +1,9 @@
 <?php
 require_once("config.php");
     
-$id=(int)$_REQUEST['aid'];
+$oid=(int)$_REQUEST['aid'];
 
-$sql = "select * from options where oid=" . $id;
+$sql = "select * from options where oid=" . $oid;
 if($results=mysqli_query($conn,$sql)) {
     $rs=mysqli_fetch_array($results);
 ?>
@@ -31,30 +31,59 @@ $.ajax({
 </script>
 </head>
 <body>
-<tr><td>answer:</td>
-<td>
+
 <?php
     $id=$_SESSION['uID'];
     $cid=$_SESSION['cID'];
     $qid=$_SESSION['qID'];    
     if ($rs['answer']==1){
-        echo "yes";
+        $sqls = "select * from `question`,`options` 
+        where question.qid=options.qid and `options`.qid='$qid' and answer=1";
+        if($result=mysqli_query($conn,$sqls)) {
+            $rss=mysqli_fetch_array($result);
+            echo "答對了^^！<br/>NO.",$rss['qid'],$rss['question'],"<br/>正解為：",$rss['woption'];
+        }
+        else{
+            echo "sql wrong";
+        }
+        /*
         $sqlplus = "update `user` set correct=correct+1 where `id`='$id';";
         mysqli_query($conn,$sqlplus) or die ("MySQL query error plus");
         $sqltin = "insert into `log`(`id`,`qid`,`truefalse`) values ('$id','$qid','1');";
         mysqli_query($conn,$sqltin) or die ("MySQL query error tin");
+        */
     }
     else{
-        echo "no";
+        echo "答錯了nono<br/>";
+        $sqls = "select * from `question`,`options` 
+        where question.qid=options.qid and `options`.qid='$qid' and answer=1";
+        if($result=mysqli_query($conn,$sqls)) {
+            $rss=mysqli_fetch_array($result);
+            echo "NO.",$rss['qid']," ",$rss['question'];
+        }
+        $sqlss = "select * from options where oid=" . $oid;
+        if($resultss=mysqli_query($conn,$sqlss)) {
+            $rsss=mysqli_fetch_array($resultss);
+            echo "<br/>你答的選項為：",$rsss['woption'];
+        }
+        $sqls = "select * from `question`,`options` 
+        where question.qid=options.qid and `options`.qid='$qid' and answer=1";
+        if($result=mysqli_query($conn,$sqls)) {
+            $rss=mysqli_fetch_array($result);
+            echo "<br/>正解為：",$rss['woption'];
+        }
+        else{
+            echo "sql wrong";
+        }
+        /*
         $sqlfin = "insert into `log`(`id`,`qid`,`truefalse`) values ('$id','$qid','0');";
         mysqli_query($conn,$sqlfin) or die ("MySQL query error fin");
+        */
     }
-    echo "<input type='button' onclick='RandomQuestions(",$cid,")' value='下一題'>";   
-?>
-</td></tr>
-<?php
+    echo "<br/><input type='button' onclick='RandomQuestions(",$cid,")' value='下一題'>";   
 }
 ?>
+
 </body>
 </html>
 

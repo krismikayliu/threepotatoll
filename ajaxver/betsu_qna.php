@@ -42,7 +42,18 @@ else{
     $total=0;
 }
 $_SESSION['qID']="";
-$random=rand(1,$total);
+
+$sqlq = "select * from `question` where cid=$cid order by qid limit 1";
+$query=mysqli_query($conn,$sqlq);
+if($rs=mysqli_fetch_array($query)){
+    $bstart=$rs[0];
+}
+else{
+    $bstart=0;
+}
+$total=$total+$bstart-1;
+
+$random=rand($bstart,$total);
 $_SESSION['qID']=$random;
 $sql = "select * from `question` where qid=$random";
 $results=mysqli_query($conn,$sql);

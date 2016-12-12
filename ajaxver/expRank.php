@@ -22,7 +22,7 @@
   </tr>
 <?php
 
-$sql = "select * from `user` order by exp desc";
+$sql = "select * from `user` where priority=0 order by exp desc limit 5";
 $results=mysqli_query($conn,$sql);
 $rank=1;
 
