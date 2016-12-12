@@ -30,7 +30,7 @@ $.ajax({
 $start=false;
 $_SESSION['start']=$start;
 ?>
-題目共有五題
+<span style="font-size:14pt;font-family:微軟正黑體;">本次練習題目共有五題</span><br/><br/>
 <input type="button" onclick="RandomQuestions()" value="開始作答">
 <!--<div class="practice">
     <ul class="pmenu">

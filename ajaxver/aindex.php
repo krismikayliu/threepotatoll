@@ -10,6 +10,7 @@ require_once("config.php");
 <link rel="stylesheet" type="text/css" href="css3.css">
 <link rel="stylesheet" href="animations.css">
 <link rel="stylesheet" href="hover-min.css">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="jquery.js" type="text/javascript"></script>

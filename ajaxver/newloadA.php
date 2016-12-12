@@ -46,7 +46,7 @@ $.ajax({
 </head>
 <body>
 <tr>
-<td>
+<td><font size="12pt">
 <?php
     $id=$_SESSION['uID'];
     $qid=$_SESSION['qID']; 
@@ -76,7 +76,7 @@ $.ajax({
     $_SESSION['i']=$i;
     
 ?>
-</td></tr>
+</font></td></tr>
 <br/>
 <?php
 }

@@ -12,12 +12,13 @@
 <title>TEA Question</title>
 </head>
 <body>
-<table width="400" border="1">
+<div id="information">
+<table id="informationtable">
   <tr>
-    <td>名稱</td>
-    <td>身分</td>
-    <td>答對題數</td>
-    <td>經驗值</td>
+    <td width="90px" height="50px" background="images/rankbubble-01.png">名稱</td>
+    <td width="80px" background="images/rankbubble-02.png">身分</td>
+    <td width="80px" background="images/rankbubble-02.png">答對題數</td>
+    <td width="200px" background="images/rankbubble-03.png">經驗值</td>
   </tr>
 <?php
 require_once("config.php");
@@ -32,18 +33,18 @@ $sql = "select * from user where id='$id';";
     if ($rs=mysqli_fetch_array($results)) {
         if($rs['priority']==0){
             echo "<tr>
-            <td>" , $rs['nickname'],"</td>
-            <td>學生</td>
-            <td>", $rs['correct'],"</td>
-            <td>", $rs['exp'],"</td>
+            <td height='50px' background='images/rankbubble-01.png'>" , $rs['nickname'],"</td>
+            <td height='50px' background='images/rankbubble-02.png'>學生</td>
+            <td height='50px' background='images/rankbubble-02.png'>", $rs['correct'],"</td>
+            <td height='50px' background='images/rankbubble-03.png'>", $rs['exp'],"</td>
             </tr>";
         }
         else if($rs['priority']==1){
             echo "<tr>
-            <td>" , $rs['nickname'],"</td>
-            <td>老師</td>
-            <td>null</td>
-            <td>null</td>
+            <td height='50px' background='images/rankbubble-01.png'>" , $rs['nickname'],"</td>
+            <td height='50px' background='images/rankbubble-02.png'>老師</td>
+            <td height='50px' background='images/rankbubble-02.png'>null</td>
+            <td height='50px' background='images/rankbubble-03.png'>null</td>
             </tr>";
         }
         else if($rs['priority']==2){
@@ -57,12 +58,13 @@ $sql = "select * from user where id='$id';";
     }
 ?>
 </table>
-<br/>
-<p>近五次作答紀錄</p>
-<table width="400" border="1">
+</div>
+<div id="log">
+<p style="color:ivory;font-size:12pt;font-family:微軟正黑體;">近五次作答紀錄</p>
+<table id="logtable">
   <tr>
-    <td>分數</td>
-    <td>作答時間</td>
+    <td width="100px" height="50px" background="images/rankbubble-01.png">分數</td>
+    <td width="200px" background="images/rankbubble-03.png">作答時間</td>
   </tr>
 <?php
 
@@ -72,13 +74,13 @@ $sql = "select * from test where id='$id' order by tid desc limit 5;";
     while ($rs=mysqli_fetch_array($results)) {
     
         echo "<tr>
-        <td>" , $rs['score'],"</td>
-        <td>", $rs['time'],"</td>
+        <td height='50px' background='images/rankbubble-01.png'>" , $rs['score'],"</td>
+        <td height='50px' background='images/rankbubble-03.png'>", $rs['time'],"</td>
         </tr>";
     }
 ?>
 </table>
-
+</div>
 </body>
 </html>
 

@@ -10,6 +10,7 @@ if($results=mysqli_query($conn,$sql)) {
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<?php echo'<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">'?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -41,7 +42,7 @@ $.ajax({
         where question.qid=options.qid and `options`.qid='$qid' and answer=1";
         if($result=mysqli_query($conn,$sqls)) {
             $rss=mysqli_fetch_array($result);
-            echo "答對了^^！<br/>NO.",$rss['qid'],$rss['question'],"<br/>正解為：",$rss['woption'];
+            echo "<i class='fa fa-circle-o' aria-hidden='true'></i> 答對了^^！<br/>NO.",$rss['qid'],$rss['question'],"<br/>正解為：",$rss['woption'];
         }
         else{
             echo "sql wrong";
@@ -54,7 +55,7 @@ $.ajax({
         */
     }
     else{
-        echo "答錯了nono<br/>";
+        echo "<i class='fa fa-times' aria-hidden='true'></i>答錯了nono<br/>";
         $sqls = "select * from `question`,`options` 
         where question.qid=options.qid and `options`.qid='$qid' and answer=1";
         if($result=mysqli_query($conn,$sqls)) {

@@ -115,8 +115,8 @@ if($i<5){
     while (	$rs=mysqli_fetch_array($results)) {
 
         echo "<tr>
-        <td width='450px' background='images/testans-01.png'>" , $rs['woption'],"</td>
-        <td>", "<input type='button' value='選擇' onclick='getA(" , $rs['oid'] ,")'></td>
+        <td width='450px' background='images/testans-01.png' class='tdfont'>" , $rs['woption'],"</td>
+        <td width='100px' background='images/testans-02.png'>", "<input type='button' value='選擇' onclick='getA(" , $rs['oid'] ,")'></td>
         </tr>";
     }
 }

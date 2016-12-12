@@ -232,7 +232,7 @@ border-width:邊框的寬度;
     margin-top:30px;
 }
 .box1{
-    background-color:rgba(0, 113, 188,0.7);
+    background-color:#cedddd;
     width:300px;
     height:480px;
     float:left;
@@ -243,7 +243,7 @@ border-width:邊框的寬度;
     box-shadow: #999 1px 3px 5px; /*陰影for IE*/
 }
 .box2,.box3{
-    background-color:rgba(0, 113, 188,0.7);
+    background-color:#cedddd;
     width:300px;
     height:480px;
     float:left;
@@ -262,7 +262,6 @@ border-width:邊框的寬度;
     line-height:24pt;
     padding:10px;
     font-family:微軟正黑體;
-    color:ivory;
 }
 .teapart{
     //background-color:gray;
@@ -467,7 +466,7 @@ border-width:邊框的寬度;
     //background-color:pink;
     width:1200px;
     height:500px;
-    //margin-left:70px;
+    margin-left:40px;
 }
 .grow1{
     background-color:#ffffb3;
@@ -584,7 +583,7 @@ border-width:邊框的寬度;
     //background-color:#999;
 }
 #opttable td.tdfont{color:ivory;}
-#wrong{
+#wrong{/*錯題榜*/
     //background-color:skyblue;
     height:400px;
     width:650px;
@@ -595,11 +594,13 @@ border-width:邊框的寬度;
     //background-color:pink;
     //height:60px;
     width:600px;
+    font-size:12pt;
+    color:ivory;
     font-family:微軟正黑體;
 }
 #wrongtable td {
     //border: 1px solid black;
-    padding-left:20px;
+    padding-left:30px;
     //background-color:#999;
 }
 #exp{
@@ -608,7 +609,7 @@ border-width:邊框的寬度;
     width:650px;
     overflow:auto;
 }
-#exptable{
+#exptable{/*排行榜*/
     //border:3px solid black;
     //height:60px;
     width:600px;
@@ -621,14 +622,14 @@ border-width:邊框的寬度;
     padding-left:30px;
     //background-color:#999;
 }
-#wq{
+#wq{/*錯誤題目*/
     //background-color:yellow;
     height:400px;
     width:650px;
     overflow:auto;
 }
 #wqtable{
-    border:3px solid black;
+    //border:3px solid black;
     //height:60px;
     width:600px;
     //background-color:pink;
@@ -637,8 +638,43 @@ border-width:邊框的寬度;
     font-family:微軟正黑體;
 }
 #wqtable td{
-    border: 1px solid black;
-    padding-left:20px;
+    //border: 1px solid black;
+    padding-left:15px;
+    //background-color:#999;
+}
+#information{
+    //background-color:pink;
+    height:120px;
+    width:500px;
+    overflow:auto;
+}
+#informationtable{
+    //border:3px solid black;
+    width:450px;
+    font-size:12pt;
+    color:ivory;
+    font-family:微軟正黑體;
+}
+#informationtable td{
+    //border: 1px solid black;
+    padding-left:15px;
+    //background-color:#999;
+}
+#log{
+    //background-color:yellow;
+    height:330px;
+    width:400px;
+}
+#logtable{
+    //border:3px solid black;
+    width:300px;
+    font-size:12pt;
+    color:ivory;
+    font-family:微軟正黑體;
+}
+#logtable td{
+    //border: 1px solid black;
+    padding-left:15px;
     //background-color:#999;
 }
 .divh1{
