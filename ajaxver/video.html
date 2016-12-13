@@ -1,11 +1,12 @@
-﻿<?php
-require_once("config.php");
-?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" -->
 <html xmlns="http://www.w3.org/1999/xhtml"  style="height: 100%;">
 <head>
 <title>Video</title>
+<link rel="stylesheet" type="text/css" href="css3.css">
+<link rel="stylesheet" href="animations.css">
+<link rel="stylesheet" href="hover-min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -13,6 +14,20 @@ require_once("config.php");
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript">
+function callvideo3() {
+	DIV='left';
+$.ajax({
+		url: 'video3.html',
+		dataType: 'html',
+		type: 'POST',
+		error: function(xhr) {
+			$('#'+DIV).html(xhr);
+			},
+		success: function(response) {
+			$('#'+DIV).html(response); //set the html content of the object msg
+			}
+	});
+}
 $(document).ready(function(){
     $(".flip").click(function(){
         $(".info1").slideToggle("normal");
@@ -31,91 +46,31 @@ $(".info2").click(function(){
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
+<a class="hvr-grow" id="backtotop" href="#" title="Back to Top" style="color:#3F3F40"><i class="fa fa-chevron-circle-up fa-5x" aria-hidden="true"></i></a>
 </head>
 <body>
     <div class="videopart" id="videopart"><!--影片部分-->
     <div class="divh1">教學影片</div>
         <div class="row" id="videoall">
             <div class="row" id="left">
-                <div class="video1" id="video">
-                    <div class="embed-responsive embed-responsive-16by9" >
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/EcpZSALxkHc?rel=0&amp;showinfo=0"></iframe>
-                    </div>
-                </div>
-                <div class="flip">
-                <b>第四站：茶葉揉捻</b><br/><br/>
-                <span style="font-size:14pt">步驟說明：</span>
-                </div>
-                <div class="info1" id="info">
-                    <!--影片資訊-->
-                    ●	揉捻前機具檢視與清潔<br/>
-                    1.	操作檢視下柔盤的上下動作及壓力閥旋鈕是否正常運作<br/>
-                    2.	開啟揉捻機電源，檢視上揉蓋的轉動是否正常運作，關閉揉捻機電源<br/>
-                    3.	傾斜下揉盤<br/>
-                    4.	以毛刷清潔揉捻機<br/>
-                    ●	揉捻動作<br/>
-                    1.	將適量已殺菁之茶菁置入下揉盤內<br/>
-                    2.	復位已傾斜的下揉盤<br/>
-                    3.	啟動電源進行揉捻作業，並適時將其餘茶菁逐次置入下揉盤內<br/>
-                    4.	進行揉捻機壓力閥之加壓動作，完成時壓力閥扣鈕應確實扣緊<br/>
-                    5.	進行揉捻機壓力閥之減壓動作，完成時壓力閥扣鈕應確實扣緊<br/>
-                    6.	揉捻過程適時以毛刷將溢出的茶菁撥回下揉盤中<br/>
-                    ●	揉捻過程中之解塊散熱<br/>
-                    1.	解塊散熱前關閉電源<br/>
-                    2.	傾斜下揉盤<br/>
-                    3.	將茶菁撥出並放入軟笳笠中解塊散熱<br/>
-                    4.	將茶菁重新置入下揉盤中並復位<br/>
-                    5.	啟動電源繼續揉捻<br/>
-                    ●	揉捻完成後動作<br/>
-                    1.	揉捻完成後關閉電源<br/>
-                    2.	傾斜下揉盤<br/>
-                    3.	將茶菁撥出並放入軟笳笠中解塊散熱<br/>
-                    4.	以毛刷清潔揉捻機<br/>
-                    5.	復原揉捻機下揉盤<br/>
-                    6.	將已完成揉捻之茶菁及軟笳笠移置指定位置<br/>
-                    ●	製茶衛生<br/>
-                    1.	落地之茶菁不得再加工使用<br/>
-                    2.	軟笳笠全程不得直接放於地面上<br/>
-                    3.	揉捻完成後應整理環境，如有落地之茶菁應全部清掃拾起丟置於垃圾桶內<br/>
-                </div>
-                <div class="info2" id="info">
-                    <!--牛刀小試-->
-                    練習1.以下何者非茶葉揉捻的作用?<br/>
-                    (a)揉破葉細胞，使成分容易溶解，以利沖泡<br/>
-                    (b)使茶葉成捲曲狀，以利保存<br/>
-                    (c)利用揉捻的輕重，塑造茶葉不同的風味<br/>
-                    (d)急速破壞植物體中存在的酵素活性<br/><br/>
-                    練習2.以下何者敘述正確?<br/>
-                    (a)揉捻輕者，茶性低沉<br/>
-                    (b)揉捻重者，茶性輕揚<br/>
-                    (c)一組數球揉過後，逐一打開將茶青鬆散，稱為「乾燥」<br/>
-                    (d)重揉捻就是一般人所說的「全球」<br/><br/>
-                    <b style="font-size:14pt"><--點一下即可顯示答案--></b>
-                </div>
-                <div class="info3" id="info">
-                    <!--牛刀小試ANS-->
-                    練習1:<br/>
-                    ANS：(d)<br/>
-                    練習2:<br/>
-                    ANS：(d)<br/>
-                </div>
+                <div style="border:8px solid #cedddd;width:95%;height:420px;line-height:410px;text-align:center;font-size:30pt;font-family:微軟正黑體;">點選右邊按鈕選擇影片單元</div>
             </div>
             <div class="row" id="right">
                 <div class="button1 hvr-grow" id="button">
-                    <a href="" style="color:rgba(0, 169, 157,0.7)">
+                    <a href="javascript:callvideo3()" style="color:rgba(0, 169, 157,0.7)">
                         <span class="fa-stack fa-2x">
                       <i class="fa fa-square-o fa-stack-2x"></i>
                       <i class="fa fa-leaf fa-stack-1x"></i>
                   </span><br/>一、炒菁機操作</a>
                   </div>
                   <div class="button2 hvr-grow" id="button">
-                    <a href="" style="color:rgba(0, 169, 157,0.7)"><span class="fa-stack fa-2x">
+                    <a href="javascript:callvideo3()" style="color:rgba(0, 169, 157,0.7)"><span class="fa-stack fa-2x">
                       <i class="fa fa-square-o fa-stack-2x"></i>
                       <i class="fa fa-pagelines fa-stack-1x"></i>
                   </span><br/>二、茶 葉 炒 菁</a>
               </div>
               <div class="button3 hvr-grow" id="button">
-                <a href="" style="color:rgba(0, 169, 157,0.7)"><span class="fa-stack fa-2x">
+                <a href="javascript:callvideo3()" style="color:rgba(0, 169, 157,0.7)"><span class="fa-stack fa-2x">
                   <i class="fa fa-square-o fa-stack-2x"></i>
                   <i class="fa fa-envira fa-stack-1x"></i>
               </span><br/>三、揉捻機操作</a>
